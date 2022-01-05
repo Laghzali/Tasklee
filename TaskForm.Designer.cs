@@ -68,6 +68,7 @@ namespace Takliy
             // 
             // button1
             // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(187)))), ((int)(((byte)(134)))));
             this.button1.Dock = System.Windows.Forms.DockStyle.Right;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Location = new System.Drawing.Point(725, 0);
@@ -75,7 +76,8 @@ namespace Takliy
             this.button1.Size = new System.Drawing.Size(75, 29);
             this.button1.TabIndex = 0;
             this.button1.Text = "New Task";
-            this.button1.UseVisualStyleBackColor = true;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 

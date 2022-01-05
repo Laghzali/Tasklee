@@ -151,8 +151,9 @@ namespace Takliy
             this.mainPanel.Name = "mainPanel";
             this.mainPanel.Size = new System.Drawing.Size(1066, 689);
             this.mainPanel.TabIndex = 2;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
-            // mainForm
+            // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -160,7 +161,7 @@ namespace Takliy
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.headerPanel);
-            this.Name = "mainForm";
+            this.Name = "MainForm";
             this.Text = "mainForm";
             this.sidebarPanel.ResumeLayout(false);
             this.ResumeLayout(false);

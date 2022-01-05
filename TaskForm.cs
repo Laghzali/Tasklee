@@ -66,5 +66,11 @@ namespace Takliy
             }
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Form ShowAddTask = new AddTask();
+            ShowAddTask.Show();
+        }
     }
 }
