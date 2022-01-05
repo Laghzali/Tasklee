@@ -30,6 +30,7 @@ namespace Takliy
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -48,6 +49,7 @@ namespace Takliy
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.button2);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.button1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
@@ -55,6 +57,15 @@ namespace Takliy
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 29);
             this.panel1.TabIndex = 0;
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(644, 3);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.TabIndex = 1;
+            this.button2.Text = "Refresh";
+            this.button2.UseVisualStyleBackColor = true;
             // 
             // label1
             // 
@@ -168,6 +179,7 @@ namespace Takliy
             this.Name = "TaskForm";
             this.Text = "TaskForm";
             this.Load += new System.EventHandler(this.TaskForm_Load);
+
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
@@ -190,5 +202,6 @@ namespace Takliy
         private System.Windows.Forms.DataGridViewTextBoxColumn Startdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
         private System.Windows.Forms.DataGridViewButtonColumn Actions;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -11,66 +11,24 @@ using Microsoft.Data.Sqlite;
 namespace Takliy
 {
     public partial class TaskForm : Form
+        
     {
         public TaskForm()
         {
             InitializeComponent();
         }
-
+        public static Task _Tasks = new Task();
         private void TaskForm_Load(object sender, EventArgs e)
         {
-            BindTasks();
-
-        }
-
-        private void BindTasks()
-        {
-            
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
-            var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
-            conn.Open();
-            var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Tasks", conn);
-            Microsoft.Data.Sqlite.SqliteDataReader TaskReader = TasksQuery.ExecuteReader();
-            while (TaskReader.Read())
-            {
-                string OwnerName = "";
-                string AssigneName = "";
-
-                string OwnerID = TaskReader.GetValue(3).ToString();
-                string AssigneID = TaskReader.GetValue(4).ToString();
-
-                //geting Owner name and assigne name by id query
-                var OwnerNameQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Select name From Users  Where id= {OwnerID} ", conn);
-                var AssigneNameQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Select name  From Users Where id= {AssigneID}", conn);
-
-                //executing owner & assigne names query
-                Microsoft.Data.Sqlite.SqliteDataReader OwnerReader = OwnerNameQuery.ExecuteReader();
-                Microsoft.Data.Sqlite.SqliteDataReader AssigneReader = AssigneNameQuery.ExecuteReader();
-
-                //getting owner & assigne name values and plug them to the correspandant variable
-                while (OwnerReader.Read()) { OwnerName = OwnerReader.GetValue(0).ToString(); }
-                while (AssigneReader.Read()) { AssigneName = AssigneReader.GetValue(0).ToString(); }
-
-
-                //Fill the data grid with the final data
-                dataGridView1.Rows.Add(new object[] {
-
-                TaskReader.GetValue(1),
-                TaskReader.GetValue(2),
-                OwnerName,
-                AssigneName,
-                TaskReader.GetValue(5),
-                TaskReader.GetValue(6),
-                "Edit"
-                });
-            }
+            _Tasks.GetTasks(dataGridView1);
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form ShowAddTask = new AddTask();
+            Form ShowAddTask = new AddTaskForm();
             ShowAddTask.Show();
         }
+
     }
 }

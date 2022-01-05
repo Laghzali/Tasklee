@@ -3,13 +3,15 @@ using System.Windows.Forms;
 
 namespace Takliy
 {
+    
     public partial class MainForm : Form
     {
+        public static Form _MainForm = new TaskForm();
         public MainForm()
         {
             InitializeComponent();
         }
-        private void loadform(object Form)
+        public void loadform(object Form)
         {
             if (this.mainPanel.Controls.Count > 0)
                 this.mainPanel.Controls.RemoveAt(0);
@@ -23,7 +25,7 @@ namespace Takliy
         }
         private void tasksButton_Click(object sender, EventArgs e)
         {
-            loadform(new TaskForm());
+            loadform(_MainForm);
         }
 
         private void mainPanel_Paint(object sender, PaintEventArgs e)
