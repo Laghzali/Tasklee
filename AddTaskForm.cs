@@ -39,6 +39,7 @@ namespace Takliy
             }
         }
 
+        MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
         private void button2_Click(object sender, EventArgs e)
         {
 
@@ -54,6 +55,8 @@ namespace Takliy
                     StartDatePicker.Value.ToString(),
                     EndDatePicker.Value.ToString()
                     );
+                _MainFormObj.ReloadMain();
+                _MainFormObj.Refresh();
                 message = "Task has been added succusfully";
 
             } catch
@@ -61,13 +64,6 @@ namespace Takliy
                 message = "Error adding task";
             }
             MessageBox.Show(message);
-        }
-
-        private void AddTaskForm_FormClosed(object sender, FormClosedEventArgs e)
-        {
-            MainForm._MainForm.Close();
-            Form newTaskForm = new TaskForm();
-            newTaskForm.Show();
         }
     }
 }

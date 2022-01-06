@@ -203,7 +203,6 @@ namespace Takliy
             this.Name = "AddTaskForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Add new task";
-            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.AddTaskForm_FormClosed);
             this.Load += new System.EventHandler(this.AddTask_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();

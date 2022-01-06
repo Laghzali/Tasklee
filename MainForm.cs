@@ -6,7 +6,6 @@ namespace Takliy
     
     public partial class MainForm : Form
     {
-        public static Form _MainForm = new TaskForm();
         public MainForm()
         {
             InitializeComponent();
@@ -25,9 +24,12 @@ namespace Takliy
         }
         private void tasksButton_Click(object sender, EventArgs e)
         {
-            loadform(_MainForm);
+            loadform(new TaskForm());
         }
-
+        public void ReloadMain()
+        {
+            loadform(new TaskForm());
+        }
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
