@@ -20,8 +20,9 @@ namespace Takliy
         public static Task _Tasks = new Task();
         private void TaskForm_Load(object sender, EventArgs e)
         {
-            _Tasks.GetTasks(dataGridView1);
+            DataGridView grid = dataGridView1;
 
+            _Tasks.GetTasks(grid);
         }
 
         private void button1_Click(object sender, EventArgs e)
