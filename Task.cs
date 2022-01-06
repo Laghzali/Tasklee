@@ -88,8 +88,9 @@ namespace Takliy
                 AssigneName,
                 TaskReader.GetValue(5), //start date
                 TaskReader.GetValue(6), //end date
-                "Edit"
+
                 });
+
                 for (int i = 0; i <= grid.Rows.Count - 1; i++)
                 {
                     string stage = grid.Rows[i].Cells[1].Value.ToString();

@@ -24,9 +24,7 @@ namespace Takliy
             Dictionary<string, string> comboSource = new Dictionary<string, string>();
             while (UsersReader.Read())
             {
-
-
-                
+                StageComboBox.SelectedIndex = 0;
                 comboSource.Add(UsersReader.GetValue(1).ToString(), UsersReader.GetValue(0).ToString());
                 OwnerComboBox.DataSource = new BindingSource(comboSource, null);
                 AssigneComboBox.DataSource = new BindingSource(comboSource, null);
@@ -45,9 +43,12 @@ namespace Takliy
 
             Task task = new Task();
             string message = "";
+
             try
             {
-                task.Add(
+                if (!string.IsNullOrWhiteSpace(TaskNameInput.Text) && !string.IsNullOrWhiteSpace(StageComboBox.Text))
+                {
+                    task.Add(
                     TaskNameInput.Text,
                     StageComboBox.Text,
                     Int32.Parse(OwnerComboBox.SelectedValue.ToString()),
@@ -55,10 +56,13 @@ namespace Takliy
                     StartDatePicker.Value.ToString(),
                     EndDatePicker.Value.ToString()
                     );
-                _MainFormObj.ReloadMain();
-                _MainFormObj.Refresh();
-                message = "Task has been added succusfully";
-
+                    _MainFormObj.ReloadMain();
+                    _MainFormObj.Refresh();
+                    message = "Task has been added succusfully";
+                } else
+                {
+                    message = "All fields must be filled";
+                }
             } catch
             {
                 message = "Error adding task";

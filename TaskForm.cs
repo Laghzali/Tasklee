@@ -23,6 +23,8 @@ namespace Takliy
             DataGridView grid = dataGridView1;
 
             _Tasks.GetTasks(grid);
+            grid.ReadOnly = false;
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -35,6 +37,28 @@ namespace Takliy
         {
             dataGridView1.Rows.Clear();
             _Tasks.GetTasks(dataGridView1);
+        }
+        private int CheckedRow = 0;
+
+        private void DeleteTaskButton_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show(CheckedRow.ToString());
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CheckedRow = e.RowIndex;
+            if (e.ColumnIndex == 6)
+            {
+                for(int i =0; i < dataGridView1.Rows.Count; i++)
+                {
+                    if(e.RowIndex != i)
+                    {
+                        dataGridView1.Rows[i].Cells[6].Value = false;
+                    }
+                }
+
+            }
         }
     }
 }

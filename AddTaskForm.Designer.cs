@@ -138,6 +138,8 @@ namespace Takliy
             // 
             // AssigneComboBox
             // 
+            this.AssigneComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.AssigneComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.AssigneComboBox.FormattingEnabled = true;
             this.AssigneComboBox.Location = new System.Drawing.Point(163, 227);
             this.AssigneComboBox.Name = "AssigneComboBox";
@@ -146,6 +148,8 @@ namespace Takliy
             // 
             // OwnerComboBox
             // 
+            this.OwnerComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.OwnerComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.OwnerComboBox.FormattingEnabled = true;
             this.OwnerComboBox.Location = new System.Drawing.Point(163, 180);
             this.OwnerComboBox.Name = "OwnerComboBox";
@@ -154,6 +158,8 @@ namespace Takliy
             // 
             // StageComboBox
             // 
+            this.StageComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.StageComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.StageComboBox.FormattingEnabled = true;
             this.StageComboBox.Items.AddRange(new object[] {
             "To Do",
@@ -170,9 +176,11 @@ namespace Takliy
             this.TaskNameInput.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.TaskNameInput.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.TaskNameInput.BackColor = System.Drawing.SystemColors.Window;
             this.TaskNameInput.Location = new System.Drawing.Point(163, 80);
+            this.TaskNameInput.Margin = new System.Windows.Forms.Padding(0);
             this.TaskNameInput.Name = "TaskNameInput";
+            this.TaskNameInput.ShortcutsEnabled = false;
             this.TaskNameInput.Size = new System.Drawing.Size(281, 20);
             this.TaskNameInput.TabIndex = 1;
             // 

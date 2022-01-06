@@ -121,32 +121,29 @@
   <data name="project" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\project.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="management" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="event1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\event1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="feed1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\feed1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="feed (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\feed (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
   <data name="refresh-button" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh-button.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="project-plan" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\project-plan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="management" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\management.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="feed (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\feed (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="feed" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\feed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="planner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\planner.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="idea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\idea.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="project-plan" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\project-plan.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="feed (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\feed (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -163,8 +160,8 @@
   <data name="refresh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\refresh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="feed" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\feed.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="feed (3)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\feed (3).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="people1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\people1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -174,6 +171,12 @@
   </data>
   <data name="feed-back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\feed-back.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="feed (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\feed (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="refresh-button (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\refresh-button (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="clipboard" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\clipboard.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -187,7 +190,7 @@
   <data name="management (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\management (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="refresh-button (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\refresh-button (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="new-document" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\new-document.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
