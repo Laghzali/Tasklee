@@ -31,5 +31,10 @@ namespace Takliy
             ShowAddTask.Show();
         }
 
+        private void refreshTasksButton_Click(object sender, EventArgs e)
+        {
+            dataGridView1.Rows.Clear();
+            _Tasks.GetTasks(dataGridView1);
+        }
     }
 }
