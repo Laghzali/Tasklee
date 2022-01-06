@@ -38,27 +38,61 @@ namespace Takliy
             dataGridView1.Rows.Clear();
             _Tasks.GetTasks(dataGridView1);
         }
-        private int CheckedRow = 0;
-
+        private DataGridViewRow CheckedRow;
+        private int CheckedTaskID = 0;
+        //delete button checkbox logic
+        private int prevIndex = -1;
+        private bool DeleteButtonEnabled = true;
+        //
         private void DeleteTaskButton_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(CheckedRow.ToString());
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this task?", "Delete Task", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                Task delTask = new Task();
+                delTask.Remove(CheckedTaskID);
+                dataGridView1.Rows.Remove(CheckedRow);
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                
+            }
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-            CheckedRow = e.RowIndex;
-            if (e.ColumnIndex == 6)
+
+            CheckedRow = dataGridView1.Rows[e.RowIndex];
+            CheckedTaskID = Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            if (e.ColumnIndex == 7)
             {
-                for(int i =0; i < dataGridView1.Rows.Count; i++)
+                for (int i =0; i < dataGridView1.Rows.Count; i++)
                 {
                     if(e.RowIndex != i)
                     {
-                        dataGridView1.Rows[i].Cells[6].Value = false;
+                        dataGridView1.Rows[i].Cells[7].Value = false;
+                        
+
+                    } else
+                    {
+                        dataGridView1.Rows[i].Cells[7].Value = true;
+                        
                     }
                 }
 
+                    if (prevIndex == e.RowIndex)
+                    {
+                       // MessageBox.Show("same one");
+                         DeleteButtonEnabled = !DeleteButtonEnabled;
+                    } else
+                    {
+                       // MessageBox.Show("another one");
+                        DeleteButtonEnabled = true;
+                    }
+
             }
+            prevIndex = e.RowIndex;
+            DeleteTaskButton.Enabled = DeleteButtonEnabled;
         }
     }
 }

@@ -30,11 +30,13 @@ namespace Takliy
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.DeleteTaskButton = new System.Windows.Forms.Button();
+            this.refreshTasksButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.refreshTasksButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.TaskID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name_cell = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Stage = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Owner = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -42,7 +44,6 @@ namespace Takliy
             this.Startdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AactionsCheckBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.DeleteTaskButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
@@ -60,6 +61,37 @@ namespace Takliy
             this.panel1.Size = new System.Drawing.Size(800, 33);
             this.panel1.TabIndex = 0;
             // 
+            // DeleteTaskButton
+            // 
+            this.DeleteTaskButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.DeleteTaskButton.BackgroundImage = global::Takliy.Properties.Resources.delete;
+            this.DeleteTaskButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.DeleteTaskButton.Enabled = false;
+            this.DeleteTaskButton.FlatAppearance.BorderSize = 0;
+            this.DeleteTaskButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.DeleteTaskButton.Location = new System.Drawing.Point(700, 5);
+            this.DeleteTaskButton.Margin = new System.Windows.Forms.Padding(0);
+            this.DeleteTaskButton.Name = "DeleteTaskButton";
+            this.DeleteTaskButton.Size = new System.Drawing.Size(25, 23);
+            this.DeleteTaskButton.TabIndex = 2;
+            this.DeleteTaskButton.UseVisualStyleBackColor = true;
+            this.DeleteTaskButton.Click += new System.EventHandler(this.DeleteTaskButton_Click);
+            // 
+            // refreshTasksButton
+            // 
+            this.refreshTasksButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.refreshTasksButton.BackgroundImage = global::Takliy.Properties.Resources.refresh_button__1_;
+            this.refreshTasksButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.refreshTasksButton.FlatAppearance.BorderSize = 0;
+            this.refreshTasksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.refreshTasksButton.Location = new System.Drawing.Point(729, 5);
+            this.refreshTasksButton.Margin = new System.Windows.Forms.Padding(0);
+            this.refreshTasksButton.Name = "refreshTasksButton";
+            this.refreshTasksButton.Size = new System.Drawing.Size(33, 25);
+            this.refreshTasksButton.TabIndex = 1;
+            this.refreshTasksButton.UseVisualStyleBackColor = true;
+            this.refreshTasksButton.Click += new System.EventHandler(this.refreshTasksButton_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -69,6 +101,21 @@ namespace Takliy
             this.label1.Size = new System.Drawing.Size(46, 21);
             this.label1.TabIndex = 0;
             this.label1.Text = "Tasks";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.SystemColors.Control;
+            this.button1.BackgroundImage = global::Takliy.Properties.Resources.new_document;
+            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(765, 0);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(35, 33);
+            this.button1.TabIndex = 0;
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // panel2
             // 
@@ -87,6 +134,7 @@ namespace Takliy
             this.dataGridView1.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.TaskID,
             this.Name_cell,
             this.Stage,
             this.Owner,
@@ -102,35 +150,13 @@ namespace Takliy
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
-            // refreshTasksButton
+            // TaskID
             // 
-            this.refreshTasksButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.refreshTasksButton.BackgroundImage = global::Takliy.Properties.Resources.refresh_button__1_;
-            this.refreshTasksButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.refreshTasksButton.FlatAppearance.BorderSize = 0;
-            this.refreshTasksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.refreshTasksButton.Location = new System.Drawing.Point(729, 5);
-            this.refreshTasksButton.Margin = new System.Windows.Forms.Padding(0);
-            this.refreshTasksButton.Name = "refreshTasksButton";
-            this.refreshTasksButton.Size = new System.Drawing.Size(33, 25);
-            this.refreshTasksButton.TabIndex = 1;
-            this.refreshTasksButton.UseVisualStyleBackColor = true;
-            this.refreshTasksButton.Click += new System.EventHandler(this.refreshTasksButton_Click);
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.SystemColors.Control;
-            this.button1.BackgroundImage = global::Takliy.Properties.Resources.new_document;
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.button1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(765, 0);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(35, 33);
-            this.button1.TabIndex = 0;
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.TaskID.DataPropertyName = "TaskID";
+            this.TaskID.HeaderText = "TaskID";
+            this.TaskID.Name = "TaskID";
+            this.TaskID.ReadOnly = true;
+            this.TaskID.Visible = false;
             // 
             // Name_cell
             // 
@@ -187,20 +213,11 @@ namespace Takliy
             this.AactionsCheckBox.FalseValue = "False";
             this.AactionsCheckBox.FillWeight = 16.46514F;
             this.AactionsCheckBox.HeaderText = "Actions";
+            this.AactionsCheckBox.IndeterminateValue = "False";
             this.AactionsCheckBox.Name = "AactionsCheckBox";
             this.AactionsCheckBox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.AactionsCheckBox.ToolTipText = "Select this task";
             this.AactionsCheckBox.TrueValue = "True";
-            // 
-            // DeleteTaskButton
-            // 
-            this.DeleteTaskButton.Location = new System.Drawing.Point(651, 5);
-            this.DeleteTaskButton.Name = "DeleteTaskButton";
-            this.DeleteTaskButton.Size = new System.Drawing.Size(75, 23);
-            this.DeleteTaskButton.TabIndex = 2;
-            this.DeleteTaskButton.Text = "button2";
-            this.DeleteTaskButton.UseVisualStyleBackColor = true;
-            this.DeleteTaskButton.Click += new System.EventHandler(this.DeleteTaskButton_Click);
             // 
             // TaskForm
             // 
@@ -229,6 +246,8 @@ namespace Takliy
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.Button refreshTasksButton;
+        private System.Windows.Forms.Button DeleteTaskButton;
+        private System.Windows.Forms.DataGridViewTextBoxColumn TaskID;
         private System.Windows.Forms.DataGridViewTextBoxColumn Name_cell;
         private System.Windows.Forms.DataGridViewTextBoxColumn Stage;
         private System.Windows.Forms.DataGridViewTextBoxColumn Owner;
@@ -236,6 +255,5 @@ namespace Takliy
         private System.Windows.Forms.DataGridViewTextBoxColumn Startdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
         private System.Windows.Forms.DataGridViewCheckBoxColumn AactionsCheckBox;
-        private System.Windows.Forms.Button DeleteTaskButton;
     }
 }

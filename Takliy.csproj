@@ -199,6 +199,7 @@
     <None Include="Resources\planner.png" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="Resources\delete.png" />
     <None Include="Resources\new-document.png" />
     <None Include="Resources\refresh-button %281%29.png" />
     <None Include="Resources\refresh-button.png" />

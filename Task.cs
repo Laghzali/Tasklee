@@ -81,7 +81,7 @@ namespace Takliy
                 //Fill the data grid with the final data
 
                 grid.Rows.Add(new object[] {
-
+                TaskReader.GetValue(0) , //TaskID
                 TaskReader.GetValue(1), //name
                 TaskReader.GetValue(2), //stage
                 OwnerName,
@@ -93,21 +93,21 @@ namespace Takliy
 
                 for (int i = 0; i <= grid.Rows.Count - 1; i++)
                 {
-                    string stage = grid.Rows[i].Cells[1].Value.ToString();
+                    string stage = grid.Rows[i].Cells[2].Value.ToString();
 
                     switch (stage)
                     {
                         case "To Do":
-                            grid.Rows[i].Cells[1].Style.BackColor = Color.Red;
+                            grid.Rows[i].Cells[2].Style.BackColor = Color.Red;
                             break;
                         case "In Progress":
-                            grid.Rows[i].Cells[1].Style.BackColor = Color.LightYellow;
+                            grid.Rows[i].Cells[2].Style.BackColor = Color.LightYellow;
                             break;
                         case "Done":
-                            grid.Rows[i].Cells[1].Style.BackColor = Color.LightGreen;
+                            grid.Rows[i].Cells[2].Style.BackColor = Color.LightGreen;
                             break;
                         case "Canceled":
-                            grid.Rows[i].Cells[1].Style.BackColor = Color.Maroon;
+                            grid.Rows[i].Cells[2].Style.BackColor = Color.Maroon;
                             break;
                     }
 
