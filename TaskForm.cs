@@ -13,6 +13,7 @@ namespace Takliy
     public partial class TaskForm : Form
         
     {
+        
         public TaskForm()
         {
             InitializeComponent();
@@ -62,10 +63,12 @@ namespace Takliy
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
-            CheckedRow = dataGridView1.Rows[e.RowIndex];
-            CheckedTaskID = Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+            
+            
             if (e.ColumnIndex == 7)
             {
+                CheckedTaskID = Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
+                CheckedRow = dataGridView1.Rows[e.RowIndex];
                 for (int i =0; i < dataGridView1.Rows.Count; i++)
                 {
                     if(e.RowIndex != i)
@@ -93,6 +96,13 @@ namespace Takliy
             }
             prevIndex = e.RowIndex;
             DeleteTaskButton.Enabled = DeleteButtonEnabled;
+        }
+
+        private void TaskEditButton_Click(object sender, EventArgs e)
+        {
+            EditTaskForm EditForm = new EditTaskForm();
+            EditForm.TaskID = CheckedTaskID;
+            EditForm.Show();
         }
     }
 }

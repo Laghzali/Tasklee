@@ -4,6 +4,6 @@
 - EDIT FORM
 - DELETE BUTTON
 - DELETE FORM
-
+- tasks need project columns and stuff
 -Tasks filter
 -deadline notification (when a task is close to deadline send a notification)

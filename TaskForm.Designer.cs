@@ -30,6 +30,7 @@ namespace Takliy
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.TaskEditButton = new System.Windows.Forms.Button();
             this.DeleteTaskButton = new System.Windows.Forms.Button();
             this.refreshTasksButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -51,6 +52,7 @@ namespace Takliy
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.TaskEditButton);
             this.panel1.Controls.Add(this.DeleteTaskButton);
             this.panel1.Controls.Add(this.refreshTasksButton);
             this.panel1.Controls.Add(this.label1);
@@ -60,6 +62,21 @@ namespace Takliy
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(800, 33);
             this.panel1.TabIndex = 0;
+            // 
+            // TaskEditButton
+            // 
+            this.TaskEditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.TaskEditButton.BackgroundImage = global::Takliy.Properties.Resources.edit;
+            this.TaskEditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.TaskEditButton.FlatAppearance.BorderSize = 0;
+            this.TaskEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TaskEditButton.Location = new System.Drawing.Point(669, 3);
+            this.TaskEditButton.Margin = new System.Windows.Forms.Padding(0);
+            this.TaskEditButton.Name = "TaskEditButton";
+            this.TaskEditButton.Size = new System.Drawing.Size(31, 27);
+            this.TaskEditButton.TabIndex = 3;
+            this.TaskEditButton.UseVisualStyleBackColor = true;
+            this.TaskEditButton.Click += new System.EventHandler(this.TaskEditButton_Click);
             // 
             // DeleteTaskButton
             // 
@@ -255,5 +272,6 @@ namespace Takliy
         private System.Windows.Forms.DataGridViewTextBoxColumn Startdate;
         private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
         private System.Windows.Forms.DataGridViewCheckBoxColumn AactionsCheckBox;
+        private System.Windows.Forms.Button TaskEditButton;
     }
 }

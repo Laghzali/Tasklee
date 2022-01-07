@@ -1,7 +1,7 @@
 ﻿
 namespace Takliy
 {
-    partial class AddTaskForm
+    partial class EditTaskForm
     {
         /// <summary>
         /// Required designer variable.
@@ -30,6 +30,8 @@ namespace Takliy
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ProjectComboBox = new System.Windows.Forms.ComboBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -42,17 +44,15 @@ namespace Takliy
             this.OwnerComboBox = new System.Windows.Forms.ComboBox();
             this.StageComboBox = new System.Windows.Forms.ComboBox();
             this.TaskNameInput = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ProjectComboBox = new System.Windows.Forms.ComboBox();
+            this.EditButtonDone = new System.Windows.Forms.Button();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel2
             // 
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.ProjectComboBox);
+            this.panel2.Controls.Add(this.label1);
             this.panel2.Controls.Add(this.label7);
             this.panel2.Controls.Add(this.label6);
             this.panel2.Controls.Add(this.label5);
@@ -65,17 +65,36 @@ namespace Takliy
             this.panel2.Controls.Add(this.OwnerComboBox);
             this.panel2.Controls.Add(this.StageComboBox);
             this.panel2.Controls.Add(this.TaskNameInput);
-            this.panel2.Controls.Add(this.button2);
+            this.panel2.Controls.Add(this.EditButtonDone);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 0);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(508, 551);
-            this.panel2.TabIndex = 1;
+            this.panel2.Size = new System.Drawing.Size(523, 506);
+            this.panel2.TabIndex = 2;
+            // 
+            // ProjectComboBox
+            // 
+            this.ProjectComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProjectComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ProjectComboBox.FormattingEnabled = true;
+            this.ProjectComboBox.Location = new System.Drawing.Point(163, 278);
+            this.ProjectComboBox.Name = "ProjectComboBox";
+            this.ProjectComboBox.Size = new System.Drawing.Size(121, 21);
+            this.ProjectComboBox.TabIndex = 15;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 278);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Project";
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(23, 389);
+            this.label7.Location = new System.Drawing.Point(23, 378);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(49, 13);
             this.label7.TabIndex = 12;
@@ -84,7 +103,7 @@ namespace Takliy
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(23, 340);
+            this.label6.Location = new System.Drawing.Point(23, 334);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(55, 13);
             this.label6.TabIndex = 11;
@@ -128,14 +147,14 @@ namespace Takliy
             // 
             // EndDatePicker
             // 
-            this.EndDatePicker.Location = new System.Drawing.Point(163, 382);
+            this.EndDatePicker.Location = new System.Drawing.Point(163, 371);
             this.EndDatePicker.Name = "EndDatePicker";
             this.EndDatePicker.Size = new System.Drawing.Size(200, 20);
             this.EndDatePicker.TabIndex = 6;
             // 
             // StartDatePicker
             // 
-            this.StartDatePicker.Location = new System.Drawing.Point(163, 334);
+            this.StartDatePicker.Location = new System.Drawing.Point(163, 327);
             this.StartDatePicker.Name = "StartDatePicker";
             this.StartDatePicker.Size = new System.Drawing.Size(200, 20);
             this.StartDatePicker.TabIndex = 5;
@@ -185,56 +204,34 @@ namespace Takliy
             this.TaskNameInput.Margin = new System.Windows.Forms.Padding(0);
             this.TaskNameInput.Name = "TaskNameInput";
             this.TaskNameInput.ShortcutsEnabled = false;
-            this.TaskNameInput.Size = new System.Drawing.Size(281, 20);
+            this.TaskNameInput.Size = new System.Drawing.Size(296, 20);
             this.TaskNameInput.TabIndex = 1;
             // 
-            // button2
+            // EditButtonDone
             // 
-            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(187)))), ((int)(((byte)(134)))));
-            this.button2.FlatAppearance.BorderSize = 0;
-            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(204, 454);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(66, 23);
-            this.button2.TabIndex = 0;
-            this.button2.Text = "Done";
-            this.button2.UseVisualStyleBackColor = false;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.EditButtonDone.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(141)))), ((int)(((byte)(187)))), ((int)(((byte)(134)))));
+            this.EditButtonDone.FlatAppearance.BorderSize = 0;
+            this.EditButtonDone.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.EditButtonDone.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EditButtonDone.Location = new System.Drawing.Point(207, 425);
+            this.EditButtonDone.Name = "EditButtonDone";
+            this.EditButtonDone.Size = new System.Drawing.Size(66, 23);
+            this.EditButtonDone.TabIndex = 0;
+            this.EditButtonDone.Text = "Done";
+            this.EditButtonDone.UseVisualStyleBackColor = false;
+            this.EditButtonDone.Click += new System.EventHandler(this.EditButtonDone_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 290);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Project";
-            // 
-            // ProjectComboBox
-            // 
-            this.ProjectComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ProjectComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ProjectComboBox.FormattingEnabled = true;
-            this.ProjectComboBox.Location = new System.Drawing.Point(163, 282);
-            this.ProjectComboBox.Name = "ProjectComboBox";
-            this.ProjectComboBox.Size = new System.Drawing.Size(121, 21);
-            this.ProjectComboBox.TabIndex = 13;
-            // 
-            // AddTaskForm
+            // EditTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(508, 551);
+            this.ClientSize = new System.Drawing.Size(523, 506);
             this.Controls.Add(this.panel2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.MaximizeBox = false;
-            this.MaximumSize = new System.Drawing.Size(524, 590);
-            this.MinimumSize = new System.Drawing.Size(524, 590);
-            this.Name = "AddTaskForm";
+            this.Name = "EditTaskForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Add new task";
-            this.Load += new System.EventHandler(this.AddTask_Load);
+            this.Text = "EditTaskForm";
+            this.Load += new System.EventHandler(this.EditTaskForm_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.ResumeLayout(false);
@@ -242,8 +239,11 @@ namespace Takliy
         }
 
         #endregion
+
         private System.Windows.Forms.Panel panel2;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
@@ -253,10 +253,8 @@ namespace Takliy
         private System.Windows.Forms.ComboBox OwnerComboBox;
         private System.Windows.Forms.ComboBox StageComboBox;
         private System.Windows.Forms.TextBox TaskNameInput;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button EditButtonDone;
         private System.Windows.Forms.ComboBox ProjectComboBox;
+        private System.Windows.Forms.Label label1;
     }
 }

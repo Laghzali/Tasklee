@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Collections.Generic;
+
 namespace Takliy
 {
     public class Task
@@ -22,7 +24,7 @@ namespace Takliy
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Delete From Tasks where id ={TaskID}", conn);
             TasksQuery.ExecuteReader();
         }
-        public void Update(int TaskID , String Stage, String Name, int Owner, int Assigne, DateTime Startdate, DateTime Deadline)
+        public void Update(int TaskID , String Name, String Stage, int Owner, int Assigne, DateTime Startdate, DateTime Deadline)
         {
             string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
@@ -30,15 +32,31 @@ namespace Takliy
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"UPDATE Tasks SET name = '{Name}', owner = '{Owner}' , stage = '{Stage}' , assigne = '{Assigne}', start = '{Startdate}', end = '{Deadline}' where id = {TaskID} ", conn);
             TasksQuery.ExecuteReader();
         }
-        public Microsoft.Data.Sqlite.SqliteDataReader Get(int TaskID)
+        public List<object> Get(int TaskID)
         {
+            List<object> ReturnData = new List<object>();
+
             string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Select * From Tasks where id = {TaskID}", conn);
+
+
             Microsoft.Data.Sqlite.SqliteDataReader TaskReader = TasksQuery.ExecuteReader();
-            return TaskReader;
+            while (TaskReader.Read())
+            {
+                ReturnData.Add(TaskReader.GetValue(1).ToString()); // name 0
+                ReturnData.Add(TaskReader.GetValue(2).ToString()); // stage 1 
+                ReturnData.Add(Int32.Parse(TaskReader.GetValue(3).ToString())); // owner 2 
+                ReturnData.Add(Int32.Parse(TaskReader.GetValue(4).ToString())); // assigne 3
+                ReturnData.Add(TaskReader.GetValue(5).ToString()); // start
+                ReturnData.Add(TaskReader.GetValue(6).ToString()); // end
+
+            }
+
+            return ReturnData;
         }
+
         public Microsoft.Data.Sqlite.SqliteDataReader GetAll()
         {
             string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";

@@ -24,17 +24,18 @@ namespace Takliy
             Dictionary<string, string> comboSource = new Dictionary<string, string>();
             while (UsersReader.Read())
             {
-                StageComboBox.SelectedIndex = 0;
+
                 comboSource.Add(UsersReader.GetValue(1).ToString(), UsersReader.GetValue(0).ToString());
-                OwnerComboBox.DataSource = new BindingSource(comboSource, null);
-                AssigneComboBox.DataSource = new BindingSource(comboSource, null);
-                OwnerComboBox.DisplayMember = "Key";
-                OwnerComboBox.ValueMember = "Value";
-                AssigneComboBox.DisplayMember = "Key";
-                AssigneComboBox.ValueMember = "Value";
-                
 
             }
+
+            StageComboBox.SelectedIndex = 0;
+            OwnerComboBox.DisplayMember = "Key";
+            OwnerComboBox.ValueMember = "Value";
+            AssigneComboBox.DisplayMember = "Key";
+            AssigneComboBox.ValueMember = "Value";
+            OwnerComboBox.DataSource = new BindingSource(comboSource, null);
+            AssigneComboBox.DataSource = new BindingSource(comboSource, null);
         }
 
         MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
@@ -48,17 +49,25 @@ namespace Takliy
             {
                 if (!string.IsNullOrWhiteSpace(TaskNameInput.Text) && !string.IsNullOrWhiteSpace(StageComboBox.Text))
                 {
-                    task.Add(
-                    TaskNameInput.Text,
-                    StageComboBox.Text,
-                    Int32.Parse(OwnerComboBox.SelectedValue.ToString()),
-                    Int32.Parse(AssigneComboBox.SelectedValue.ToString()),
-                    StartDatePicker.Value.ToString(),
-                    EndDatePicker.Value.ToString()
-                    );
-                    _MainFormObj.ReloadMain();
-                    _MainFormObj.Refresh();
-                    message = "Task has been added succusfully";
+                    if (DateTime.Compare(StartDatePicker.Value, EndDatePicker.Value) > 0 || DateTime.Compare(StartDatePicker.Value, EndDatePicker.Value) == 0)
+                    {
+                        message = "Invalid date";
+
+                    } else
+                    {
+                        task.Add(
+                        TaskNameInput.Text,
+                        StageComboBox.Text,
+                        Int32.Parse(OwnerComboBox.SelectedValue.ToString()),
+                        Int32.Parse(AssigneComboBox.SelectedValue.ToString()),
+                        StartDatePicker.Value.ToString(),
+                        EndDatePicker.Value.ToString()
+                        );
+                        _MainFormObj.ReloadMain();
+                        _MainFormObj.Refresh();
+                        message = "Task has been added succusfully";
+                    }
+
                 } else
                 {
                     message = "All fields must be filled";
