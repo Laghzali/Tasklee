@@ -13,7 +13,7 @@ namespace Takliy
     public partial class TaskForm : Form
         
     {
-        private EditTaskForm EditForm = new EditTaskForm();
+
         public int ProjectTaskID = 0;
         public TaskForm()
         {
@@ -67,46 +67,10 @@ namespace Takliy
             }
         }
 
-        private void TasksGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            if (e.ColumnIndex == 7)
-            {
-                CheckedTaskID = Int32.Parse(TasksGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
-                CheckedRow = TasksGrid.Rows[e.RowIndex];
-
-                for (int i =0; i < TasksGrid.Rows.Count; i++)
-                {
-                    if(e.RowIndex != i)
-                    {
-                        TasksGrid.Rows[i].Cells[7].Value = false;
-                        
-
-                    } else
-                    {
-                        TasksGrid.Rows[i].Cells[7].Value = true;
-                        
-                    }
-                }
-
-                    if (prevIndex == e.RowIndex)
-                    {
-                       // MessageBox.Show("same one");
-                         DeleteButtonEnabled = !DeleteButtonEnabled;
-                    } else
-                    {
-                       // MessageBox.Show("another one");
-                        DeleteButtonEnabled = true;
-                    }
-                prevIndex = e.RowIndex;
-                DeleteTaskButton.Enabled = DeleteButtonEnabled;
-                TaskEditButton.Enabled = DeleteButtonEnabled;
-            }
-
-        }
 
         private void TaskEditButton_Click(object sender, EventArgs e)
         {
-            
+            EditTaskForm EditForm = new EditTaskForm();
             EditForm.TaskID = CheckedTaskID;
             EditForm.Show();
         }
@@ -117,6 +81,15 @@ namespace Takliy
             EditTaskForm EditFormEvent = new EditTaskForm();
             EditFormEvent.TaskID = CheckedTaskID;
             EditFormEvent.Show();
+        }
+
+        private void TasksGrid_SelectionChanged(object sender, EventArgs e)
+        {
+
+            CheckedTaskID = Int32.Parse(TasksGrid.CurrentRow.Cells[0].Value.ToString());
+            CheckedRow = TasksGrid.CurrentRow;
+            DeleteTaskButton.Enabled = true;
+            TaskEditButton.Enabled = true;
         }
     }
 }

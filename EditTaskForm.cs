@@ -23,7 +23,6 @@ namespace Takliy
         {
 
             List<object> TaskReader = TaskObj.Get(TaskID);
-
             Users users = new Users();
             Microsoft.Data.Sqlite.SqliteDataReader UsersReader = users.GetAll();
             Dictionary<string, string> comboSource = new Dictionary<string, string>();
@@ -41,14 +40,26 @@ namespace Takliy
                 }
 
                 comboSource.Add(UsersReader.GetValue(1).ToString(), UsersReader.GetValue(0).ToString());
-
-                
             }
-            
+
+            UsersReader.Close();
+
+            Project projects = new Project();
+            Microsoft.Data.Sqlite.SqliteDataReader ProjectsReader = projects.GetAll();
+            Dictionary<string, int> ProjectsComboSource = new Dictionary<string, int>();
+
+            while (ProjectsReader.Read())
+            {
+                ProjectsComboSource.Add(ProjectsReader.GetValue(1).ToString(), Int32.Parse(ProjectsReader.GetValue(0).ToString()));
+            }
+            ProjectsReader.Close();
             OwnerComboBox.DisplayMember = "Key";
             OwnerComboBox.ValueMember = "Value";
             AssigneComboBox.DisplayMember = "Key";
             AssigneComboBox.ValueMember = "Value";
+            ProjectComboBox.DisplayMember = "Key";
+            ProjectComboBox.ValueMember = "Value";
+            ProjectComboBox.DataSource = new BindingSource(ProjectsComboSource, null);
             OwnerComboBox.DataSource = new BindingSource(comboSource, null);
             AssigneComboBox.DataSource = new BindingSource(comboSource, null);
             TaskNameInput.Text = (string)TaskReader[0];
@@ -57,6 +68,7 @@ namespace Takliy
             AssigneComboBox.Text = OriginalAssigneName;
             StartDatePicker.Value = DateTime.Parse((string)TaskReader[4]);
             EndDatePicker.Value = DateTime.Parse((string)TaskReader[5]);
+
         }
 
         private void EditButtonDone_Click(object sender, EventArgs e)
@@ -81,7 +93,8 @@ namespace Takliy
                         Int32.Parse(OwnerComboBox.SelectedValue.ToString()),
                         Int32.Parse(AssigneComboBox.SelectedValue.ToString()),
                         StartDatePicker.Value,
-                        EndDatePicker.Value
+                        EndDatePicker.Value,
+                        Int32.Parse(ProjectComboBox.SelectedValue.ToString())
                         );
                         _MainFormObj.ReloadMain();
                         _MainFormObj.Refresh();

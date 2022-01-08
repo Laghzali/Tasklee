@@ -22,19 +22,38 @@ namespace Takliy
             Users users = new Users();
             SqliteDataReader UsersReader = users.GetAll();
             Dictionary<string, string> comboSource = new Dictionary<string, string>();
+
+
             while (UsersReader.Read())
             {
-
                 comboSource.Add(UsersReader.GetValue(1).ToString(), UsersReader.GetValue(0).ToString());
-
+                
             }
 
+            UsersReader.Close();
+
+            Project projects = new Project();
+            SqliteDataReader ProjectsReader = projects.GetAll();
+            Dictionary<string, int> ProjectsComboSource = new Dictionary<string, int>();
+            while (ProjectsReader.Read())
+            {
+                ProjectsComboSource.Add(ProjectsReader.GetValue(1).ToString(), Int32.Parse(ProjectsReader.GetValue(0).ToString()));
+            }
+            ProjectsReader.Close();
             StageComboBox.SelectedIndex = 0;
+
+            //Owner
             OwnerComboBox.DisplayMember = "Key";
             OwnerComboBox.ValueMember = "Value";
+            OwnerComboBox.DataSource = new BindingSource(comboSource, null);
+            //Project
+            ProjectComboBox.DisplayMember = "Key";
+            ProjectComboBox.ValueMember = "Value";
+            ProjectComboBox.DataSource = new BindingSource(ProjectsComboSource, null);
+
+            //Assigne
             AssigneComboBox.DisplayMember = "Key";
             AssigneComboBox.ValueMember = "Value";
-            OwnerComboBox.DataSource = new BindingSource(comboSource, null);
             AssigneComboBox.DataSource = new BindingSource(comboSource, null);
         }
 
@@ -61,8 +80,7 @@ namespace Takliy
                         Int32.Parse(OwnerComboBox.SelectedValue.ToString()),
                         Int32.Parse(AssigneComboBox.SelectedValue.ToString()),
                         StartDatePicker.Value.ToString(),
-                        EndDatePicker.Value.ToString()
-                        );
+                        EndDatePicker.Value.ToString(), 1);
                         _MainFormObj.ReloadMain();
                         _MainFormObj.Refresh();
                         message = "Task has been added succusfully";

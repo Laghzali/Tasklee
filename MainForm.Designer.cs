@@ -32,7 +32,6 @@ namespace Takliy
             this.headerPanel = new System.Windows.Forms.Panel();
             this.sidebarPanel = new System.Windows.Forms.Panel();
             this.button4 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
             this.tasksButton = new System.Windows.Forms.Button();
             this.ProjectsMenuButton = new System.Windows.Forms.Button();
             this.dashButton = new System.Windows.Forms.Button();
@@ -53,7 +52,6 @@ namespace Takliy
             // 
             this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(68)))), ((int)(((byte)(86)))));
             this.sidebarPanel.Controls.Add(this.button4);
-            this.sidebarPanel.Controls.Add(this.button3);
             this.sidebarPanel.Controls.Add(this.tasksButton);
             this.sidebarPanel.Controls.Add(this.ProjectsMenuButton);
             this.sidebarPanel.Controls.Add(this.dashButton);
@@ -72,28 +70,12 @@ namespace Takliy
             this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.button4.Image = global::Takliy.Properties.Resources.planner;
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 242);
+            this.button4.Location = new System.Drawing.Point(12, 188);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(182, 48);
             this.button4.TabIndex = 4;
             this.button4.Text = "EVENTS";
             this.button4.UseVisualStyleBackColor = true;
-            // 
-            // button3
-            // 
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button3.FlatAppearance.BorderSize = 0;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Image = global::Takliy.Properties.Resources.managment;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(12, 188);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(182, 48);
-            this.button3.TabIndex = 3;
-            this.button3.Text = "MY TEAM";
-            this.button3.UseVisualStyleBackColor = true;
             // 
             // tasksButton
             // 
@@ -178,7 +160,6 @@ namespace Takliy
         private System.Windows.Forms.Panel sidebarPanel;
         private System.Windows.Forms.Panel mainPanel;
         private System.Windows.Forms.Button dashButton;
-        private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button tasksButton;
         private System.Windows.Forms.Button ProjectsMenuButton;
         private System.Windows.Forms.Button button4;

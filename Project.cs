@@ -44,7 +44,15 @@ namespace Takliy
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"UPDATE Tasks SET name = '{Name}', leader = '{Leader}' where id = {ProjectID} ", conn);
             TasksQuery.ExecuteReader();
         }
-
+        public Microsoft.Data.Sqlite.SqliteDataReader GetAll()
+        {
+            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+            var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
+            conn.Open();
+            var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Projects", conn);
+            Microsoft.Data.Sqlite.SqliteDataReader TaskReader = TasksQuery.ExecuteReader();
+            return TaskReader;
+        }
         public void GetProjects(DataGridView grid)
         {
 
