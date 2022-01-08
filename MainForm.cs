@@ -34,5 +34,10 @@ namespace Takliy
         {
 
         }
+
+        private void ProjectsMenuButton_Click(object sender, EventArgs e)
+        {
+            loadform(new ProjectForm());
+        }
     }
 }

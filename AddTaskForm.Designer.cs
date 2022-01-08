@@ -30,6 +30,8 @@ namespace Takliy
         private void InitializeComponent()
         {
             this.panel2 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ProjectComboBox = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -43,8 +45,6 @@ namespace Takliy
             this.StageComboBox = new System.Windows.Forms.ComboBox();
             this.TaskNameInput = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.ProjectComboBox = new System.Windows.Forms.ComboBox();
             this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -71,6 +71,25 @@ namespace Takliy
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(508, 551);
             this.panel2.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(23, 290);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(40, 13);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Project";
+            // 
+            // ProjectComboBox
+            // 
+            this.ProjectComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProjectComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ProjectComboBox.FormattingEnabled = true;
+            this.ProjectComboBox.Location = new System.Drawing.Point(163, 282);
+            this.ProjectComboBox.Name = "ProjectComboBox";
+            this.ProjectComboBox.Size = new System.Drawing.Size(121, 21);
+            this.ProjectComboBox.TabIndex = 13;
             // 
             // label7
             // 
@@ -202,25 +221,6 @@ namespace Takliy
             this.button2.UseVisualStyleBackColor = false;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(23, 290);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(40, 13);
-            this.label1.TabIndex = 14;
-            this.label1.Text = "Project";
-            // 
-            // ProjectComboBox
-            // 
-            this.ProjectComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ProjectComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.ProjectComboBox.FormattingEnabled = true;
-            this.ProjectComboBox.Location = new System.Drawing.Point(163, 282);
-            this.ProjectComboBox.Name = "ProjectComboBox";
-            this.ProjectComboBox.Size = new System.Drawing.Size(121, 21);
-            this.ProjectComboBox.TabIndex = 13;
-            // 
             // AddTaskForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -230,6 +230,7 @@ namespace Takliy
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MaximizeBox = false;
             this.MaximumSize = new System.Drawing.Size(524, 590);
+            this.MinimizeBox = false;
             this.MinimumSize = new System.Drawing.Size(524, 590);
             this.Name = "AddTaskForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;

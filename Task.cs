@@ -33,6 +33,7 @@ namespace Takliy
             TasksQuery.ExecuteReader();
         }
         public List<object> Get(int TaskID)
+
         {
             List<object> ReturnData = new List<object>();
 
@@ -67,13 +68,18 @@ namespace Takliy
             return TaskReader;
         }
 
-        public void GetTasks(DataGridView grid )
+        public void GetTasks(DataGridView grid , int IsProject )
         {
 
             string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
+
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Tasks", conn);
+            if(IsProject > 0)
+            {
+                TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Select * From Tasks where pid = 1", conn);
+            }
             Microsoft.Data.Sqlite.SqliteDataReader TaskReader = TasksQuery.ExecuteReader();
             while (TaskReader.Read())
             {
@@ -109,7 +115,7 @@ namespace Takliy
 
                 });
 
-                for (int i = 0; i <= grid.Rows.Count - 1; i++)
+                for (int i = 0; i < grid.Rows.Count ; i++)
                 {
                     string stage = grid.Rows[i].Cells[2].Value.ToString();
 

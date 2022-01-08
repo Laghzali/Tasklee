@@ -67,7 +67,7 @@ namespace Takliy
             {
                 if (!string.IsNullOrWhiteSpace(TaskNameInput.Text) && !string.IsNullOrWhiteSpace(StageComboBox.Text))
                 {
-                    if( DateTime.Compare(StartDatePicker.Value, EndDatePicker.Value) > 0 || DateTime.Compare(StartDatePicker.Value, EndDatePicker.Value) == 0)
+                    if(DateTime.Compare( DateTime.Today , EndDatePicker.Value) < 0 && DateTime.Compare(DateTime.Today, StartDatePicker.Value) > 0)
                     {
                         message = "Invalid date";
 

@@ -13,7 +13,8 @@ namespace Takliy
     public partial class TaskForm : Form
         
     {
-        
+        private EditTaskForm EditForm = new EditTaskForm();
+        public int ProjectTaskID = 0;
         public TaskForm()
         {
             InitializeComponent();
@@ -21,9 +22,12 @@ namespace Takliy
         public static Task _Tasks = new Task();
         private void TaskForm_Load(object sender, EventArgs e)
         {
-            DataGridView grid = dataGridView1;
 
-            _Tasks.GetTasks(grid);
+            DataGridView grid = TasksGrid;
+            if(ProjectTaskID == 0)
+                _Tasks.GetTasks(grid , 0);
+            if (ProjectTaskID > 0)
+                _Tasks.GetTasks(grid, ProjectTaskID);
             grid.ReadOnly = false;
 
         }
@@ -36,8 +40,11 @@ namespace Takliy
 
         private void refreshTasksButton_Click(object sender, EventArgs e)
         {
-            dataGridView1.Rows.Clear();
-            _Tasks.GetTasks(dataGridView1);
+            TasksGrid.Rows.Clear();
+            if(ProjectTaskID == 0)
+                _Tasks.GetTasks(TasksGrid , 0);
+            if(ProjectTaskID > 0)
+                _Tasks.GetTasks(TasksGrid, ProjectTaskID);
         }
         private DataGridViewRow CheckedRow;
         private int CheckedTaskID = 0;
@@ -52,7 +59,7 @@ namespace Takliy
             {
                 Task delTask = new Task();
                 delTask.Remove(CheckedTaskID);
-                dataGridView1.Rows.Remove(CheckedRow);
+                TasksGrid.Rows.Remove(CheckedRow);
             }
             else if (dialogResult == DialogResult.No)
             {
@@ -60,25 +67,23 @@ namespace Takliy
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void TasksGrid_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
-
-            
-            
             if (e.ColumnIndex == 7)
             {
-                CheckedTaskID = Int32.Parse(dataGridView1.Rows[e.RowIndex].Cells[0].Value.ToString());
-                CheckedRow = dataGridView1.Rows[e.RowIndex];
-                for (int i =0; i < dataGridView1.Rows.Count; i++)
+                CheckedTaskID = Int32.Parse(TasksGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+                CheckedRow = TasksGrid.Rows[e.RowIndex];
+
+                for (int i =0; i < TasksGrid.Rows.Count; i++)
                 {
                     if(e.RowIndex != i)
                     {
-                        dataGridView1.Rows[i].Cells[7].Value = false;
+                        TasksGrid.Rows[i].Cells[7].Value = false;
                         
 
                     } else
                     {
-                        dataGridView1.Rows[i].Cells[7].Value = true;
+                        TasksGrid.Rows[i].Cells[7].Value = true;
                         
                     }
                 }
@@ -92,17 +97,26 @@ namespace Takliy
                        // MessageBox.Show("another one");
                         DeleteButtonEnabled = true;
                     }
-
+                prevIndex = e.RowIndex;
+                DeleteTaskButton.Enabled = DeleteButtonEnabled;
+                TaskEditButton.Enabled = DeleteButtonEnabled;
             }
-            prevIndex = e.RowIndex;
-            DeleteTaskButton.Enabled = DeleteButtonEnabled;
+
         }
 
         private void TaskEditButton_Click(object sender, EventArgs e)
         {
-            EditTaskForm EditForm = new EditTaskForm();
+            
             EditForm.TaskID = CheckedTaskID;
             EditForm.Show();
+        }
+
+        private void TasksGrid_CellContentDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            CheckedTaskID = Int32.Parse(TasksGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+            EditTaskForm EditFormEvent = new EditTaskForm();
+            EditFormEvent.TaskID = CheckedTaskID;
+            EditFormEvent.Show();
         }
     }
 }

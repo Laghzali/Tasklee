@@ -34,7 +34,7 @@ namespace Takliy
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.tasksButton = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.ProjectsMenuButton = new System.Windows.Forms.Button();
             this.dashButton = new System.Windows.Forms.Button();
             this.mainPanel = new System.Windows.Forms.Panel();
             this.sidebarPanel.SuspendLayout();
@@ -46,7 +46,7 @@ namespace Takliy
             this.headerPanel.Dock = System.Windows.Forms.DockStyle.Top;
             this.headerPanel.Location = new System.Drawing.Point(0, 0);
             this.headerPanel.Name = "headerPanel";
-            this.headerPanel.Size = new System.Drawing.Size(1266, 44);
+            this.headerPanel.Size = new System.Drawing.Size(1455, 50);
             this.headerPanel.TabIndex = 0;
             // 
             // sidebarPanel
@@ -55,12 +55,12 @@ namespace Takliy
             this.sidebarPanel.Controls.Add(this.button4);
             this.sidebarPanel.Controls.Add(this.button3);
             this.sidebarPanel.Controls.Add(this.tasksButton);
-            this.sidebarPanel.Controls.Add(this.button1);
+            this.sidebarPanel.Controls.Add(this.ProjectsMenuButton);
             this.sidebarPanel.Controls.Add(this.dashButton);
             this.sidebarPanel.Dock = System.Windows.Forms.DockStyle.Left;
-            this.sidebarPanel.Location = new System.Drawing.Point(0, 44);
+            this.sidebarPanel.Location = new System.Drawing.Point(0, 50);
             this.sidebarPanel.Name = "sidebarPanel";
-            this.sidebarPanel.Size = new System.Drawing.Size(200, 689);
+            this.sidebarPanel.Size = new System.Drawing.Size(176, 755);
             this.sidebarPanel.TabIndex = 1;
             // 
             // button4
@@ -86,7 +86,7 @@ namespace Takliy
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button3.Image = global::Takliy.Properties.Resources.management__1_;
+            this.button3.Image = global::Takliy.Properties.Resources.managment;
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(12, 188);
             this.button3.Name = "button3";
@@ -102,31 +102,32 @@ namespace Takliy
             this.tasksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.tasksButton.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.tasksButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.tasksButton.Image = global::Takliy.Properties.Resources.task1;
+            this.tasksButton.Image = global::Takliy.Properties.Resources.tasks;
             this.tasksButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.tasksButton.Location = new System.Drawing.Point(12, 80);
             this.tasksButton.Name = "tasksButton";
-            this.tasksButton.Size = new System.Drawing.Size(182, 48);
+            this.tasksButton.Size = new System.Drawing.Size(173, 48);
             this.tasksButton.TabIndex = 2;
             this.tasksButton.Text = "TASKS";
             this.tasksButton.UseVisualStyleBackColor = true;
             this.tasksButton.Click += new System.EventHandler(this.tasksButton_Click);
             // 
-            // button1
+            // ProjectsMenuButton
             // 
-            this.button1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button1.FlatAppearance.BorderSize = 0;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button1.Image = global::Takliy.Properties.Resources.idea;
-            this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button1.Location = new System.Drawing.Point(12, 134);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(182, 48);
-            this.button1.TabIndex = 1;
-            this.button1.Text = "PROJECTS";
-            this.button1.UseVisualStyleBackColor = true;
+            this.ProjectsMenuButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.ProjectsMenuButton.FlatAppearance.BorderSize = 0;
+            this.ProjectsMenuButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectsMenuButton.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectsMenuButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.ProjectsMenuButton.Image = global::Takliy.Properties.Resources.idea;
+            this.ProjectsMenuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ProjectsMenuButton.Location = new System.Drawing.Point(12, 134);
+            this.ProjectsMenuButton.Name = "ProjectsMenuButton";
+            this.ProjectsMenuButton.Size = new System.Drawing.Size(182, 48);
+            this.ProjectsMenuButton.TabIndex = 1;
+            this.ProjectsMenuButton.Text = "PROJECTS";
+            this.ProjectsMenuButton.UseVisualStyleBackColor = true;
+            this.ProjectsMenuButton.Click += new System.EventHandler(this.ProjectsMenuButton_Click);
             // 
             // dashButton
             // 
@@ -147,9 +148,9 @@ namespace Takliy
             // mainPanel
             // 
             this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(200, 44);
+            this.mainPanel.Location = new System.Drawing.Point(176, 50);
             this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1066, 689);
+            this.mainPanel.Size = new System.Drawing.Size(1279, 755);
             this.mainPanel.TabIndex = 2;
             this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
@@ -157,12 +158,15 @@ namespace Takliy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1266, 733);
+            this.ClientSize = new System.Drawing.Size(1455, 805);
             this.Controls.Add(this.mainPanel);
             this.Controls.Add(this.sidebarPanel);
             this.Controls.Add(this.headerPanel);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Name = "MainForm";
-            this.Text = "mainForm";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "Taskly";
             this.sidebarPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -176,7 +180,7 @@ namespace Takliy
         private System.Windows.Forms.Button dashButton;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Button tasksButton;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button ProjectsMenuButton;
         private System.Windows.Forms.Button button4;
     }
 }

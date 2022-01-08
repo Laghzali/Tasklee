@@ -36,6 +36,15 @@ namespace Takliy
             this.label1 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.TasksGrid = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewCheckBoxColumn1 = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TaskID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name_cell = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -47,6 +56,7 @@ namespace Takliy
             this.AactionsCheckBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.TasksGrid)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -68,6 +78,7 @@ namespace Takliy
             this.TaskEditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.TaskEditButton.BackgroundImage = global::Takliy.Properties.Resources.edit;
             this.TaskEditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.TaskEditButton.Enabled = false;
             this.TaskEditButton.FlatAppearance.BorderSize = 0;
             this.TaskEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.TaskEditButton.Location = new System.Drawing.Point(669, 3);
@@ -97,7 +108,7 @@ namespace Takliy
             // refreshTasksButton
             // 
             this.refreshTasksButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.refreshTasksButton.BackgroundImage = global::Takliy.Properties.Resources.refresh_button__1_;
+            this.refreshTasksButton.BackgroundImage = global::Takliy.Properties.Resources.refresh;
             this.refreshTasksButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.refreshTasksButton.FlatAppearance.BorderSize = 0;
             this.refreshTasksButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -136,12 +147,108 @@ namespace Takliy
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.TasksGrid);
             this.panel2.Controls.Add(this.dataGridView1);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 33);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(800, 417);
             this.panel2.TabIndex = 1;
+            // 
+            // TasksGrid
+            // 
+            this.TasksGrid.AllowUserToAddRows = false;
+            this.TasksGrid.AllowUserToDeleteRows = false;
+            this.TasksGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TasksGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            this.TasksGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.TasksGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.dataGridViewTextBoxColumn1,
+            this.dataGridViewTextBoxColumn2,
+            this.dataGridViewTextBoxColumn3,
+            this.dataGridViewTextBoxColumn4,
+            this.dataGridViewTextBoxColumn5,
+            this.dataGridViewTextBoxColumn6,
+            this.dataGridViewTextBoxColumn7,
+            this.dataGridViewCheckBoxColumn1});
+            this.TasksGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TasksGrid.Location = new System.Drawing.Point(0, 0);
+            this.TasksGrid.MultiSelect = false;
+            this.TasksGrid.Name = "TasksGrid";
+            this.TasksGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TasksGrid.Size = new System.Drawing.Size(800, 417);
+            this.TasksGrid.TabIndex = 1;
+            this.TasksGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TasksGrid_CellContentClick);
+            this.TasksGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TasksGrid_CellContentDoubleClick);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "TaskID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "TaskID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn2.FillWeight = 70F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.ToolTipText = "Task Name";
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Stage";
+            this.dataGridViewTextBoxColumn3.FillWeight = 24.50678F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Stage";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Owner";
+            this.dataGridViewTextBoxColumn4.FillWeight = 40F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Owner";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Assigne";
+            this.dataGridViewTextBoxColumn5.FillWeight = 40F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Assigne";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Startdate";
+            this.dataGridViewTextBoxColumn6.FillWeight = 54.49638F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Start Date";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Deadline";
+            this.dataGridViewTextBoxColumn7.FillWeight = 54.49638F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Deadline";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
+            // 
+            // dataGridViewCheckBoxColumn1
+            // 
+            this.dataGridViewCheckBoxColumn1.DataPropertyName = "AactionsCheckBox";
+            this.dataGridViewCheckBoxColumn1.FalseValue = "False";
+            this.dataGridViewCheckBoxColumn1.FillWeight = 16.46514F;
+            this.dataGridViewCheckBoxColumn1.HeaderText = "Actions";
+            this.dataGridViewCheckBoxColumn1.IndeterminateValue = "False";
+            this.dataGridViewCheckBoxColumn1.Name = "dataGridViewCheckBoxColumn1";
+            this.dataGridViewCheckBoxColumn1.Resizable = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridViewCheckBoxColumn1.ToolTipText = "Select this task";
+            this.dataGridViewCheckBoxColumn1.TrueValue = "True";
             // 
             // dataGridView1
             // 
@@ -161,11 +268,13 @@ namespace Takliy
             this.AactionsCheckBox});
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.MultiSelect = false;
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(800, 417);
             this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TasksGrid_CellContentClick);
+            this.dataGridView1.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TasksGrid_CellContentDoubleClick);
             // 
             // TaskID
             // 
@@ -250,6 +359,7 @@ namespace Takliy
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.TasksGrid)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
@@ -273,5 +383,14 @@ namespace Takliy
         private System.Windows.Forms.DataGridViewTextBoxColumn Deadline;
         private System.Windows.Forms.DataGridViewCheckBoxColumn AactionsCheckBox;
         private System.Windows.Forms.Button TaskEditButton;
+        private System.Windows.Forms.DataGridView TasksGrid;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn2;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn3;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn4;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn5;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn6;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dataGridViewTextBoxColumn7;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn dataGridViewCheckBoxColumn1;
     }
 }

@@ -63,26 +63,6 @@ namespace Takliy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap _event {
-            get {
-                object obj = ResourceManager.GetObject("event", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap clipboard {
-            get {
-                object obj = ResourceManager.GetObject("clipboard", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);
@@ -103,79 +83,9 @@ namespace Takliy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap event__1_ {
-            get {
-                object obj = ResourceManager.GetObject("event (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap event1 {
-            get {
-                object obj = ResourceManager.GetObject("event1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap feed {
-            get {
-                object obj = ResourceManager.GetObject("feed", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap feed__1_ {
-            get {
-                object obj = ResourceManager.GetObject("feed (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap feed__2_ {
-            get {
-                object obj = ResourceManager.GetObject("feed (2)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap feed__3_ {
-            get {
-                object obj = ResourceManager.GetObject("feed (3)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap feed_back {
             get {
                 object obj = ResourceManager.GetObject("feed-back", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap feed1 {
-            get {
-                object obj = ResourceManager.GetObject("feed1", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -193,19 +103,9 @@ namespace Takliy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap management {
+        internal static System.Drawing.Bitmap managment {
             get {
-                object obj = ResourceManager.GetObject("management", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap management__1_ {
-            get {
-                object obj = ResourceManager.GetObject("management (1)", resourceCulture);
+                object obj = ResourceManager.GetObject("managment", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -223,49 +123,9 @@ namespace Takliy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap people {
-            get {
-                object obj = ResourceManager.GetObject("people", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap people1 {
-            get {
-                object obj = ResourceManager.GetObject("people1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap planner {
             get {
                 object obj = ResourceManager.GetObject("planner", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap project {
-            get {
-                object obj = ResourceManager.GetObject("project", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap project_plan {
-            get {
-                object obj = ResourceManager.GetObject("project-plan", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
@@ -283,49 +143,9 @@ namespace Takliy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap refresh_button {
+        internal static System.Drawing.Bitmap tasks {
             get {
-                object obj = ResourceManager.GetObject("refresh-button", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap refresh_button__1_ {
-            get {
-                object obj = ResourceManager.GetObject("refresh-button (1)", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap task {
-            get {
-                object obj = ResourceManager.GetObject("task", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap task1 {
-            get {
-                object obj = ResourceManager.GetObject("task1", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap team {
-            get {
-                object obj = ResourceManager.GetObject("team", resourceCulture);
+                object obj = ResourceManager.GetObject("tasks", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
