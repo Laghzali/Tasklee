@@ -24,11 +24,13 @@ namespace Takliy
         {
 
             DataGridView grid = TasksGrid;
+      
             if(ProjectTaskID == 0)
                 _Tasks.GetTasks(grid , 0);
             if (ProjectTaskID > 0)
                 _Tasks.GetTasks(grid, ProjectTaskID);
             grid.ReadOnly = false;
+            TasksGrid.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.FromArgb((int)(1 * 255), Color.FromArgb(TasksGrid.CurrentRow.Cells[3].Style.BackColor.ToArgb()));
 
         }
 
@@ -48,10 +50,7 @@ namespace Takliy
         }
         private DataGridViewRow CheckedRow;
         private int CheckedTaskID = 0;
-        //delete button checkbox logic
-        private int prevIndex = -1;
-        private bool DeleteButtonEnabled = true;
-        //
+
         private void DeleteTaskButton_Click(object sender, EventArgs e)
         {
             DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this task?", "Delete Task", MessageBoxButtons.YesNo);
@@ -85,11 +84,17 @@ namespace Takliy
 
         private void TasksGrid_SelectionChanged(object sender, EventArgs e)
         {
-
-            CheckedTaskID = Int32.Parse(TasksGrid.CurrentRow.Cells[0].Value.ToString());
-            CheckedRow = TasksGrid.CurrentRow;
-            DeleteTaskButton.Enabled = true;
-            TaskEditButton.Enabled = true;
+            try
+            {
+                CheckedTaskID = Int32.Parse(TasksGrid.CurrentRow.Cells[0].Value.ToString());
+                TasksGrid.DefaultCellStyle.SelectionBackColor = Color.FromArgb((int)(1 * 255), Color.FromArgb(TasksGrid.CurrentRow.Cells[3].Style.BackColor.ToArgb()));
+                TasksGrid.DefaultCellStyle.SelectionForeColor = Color.Black;
+                CheckedRow = TasksGrid.CurrentRow;
+                DeleteTaskButton.Enabled = true;
+                TaskEditButton.Enabled = true;
+            } catch (Exception ){
+                MessageBox.Show("x");
+            }
         }
     }
 }

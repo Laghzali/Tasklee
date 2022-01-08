@@ -47,9 +47,13 @@ namespace Takliy
             Project projects = new Project();
             Microsoft.Data.Sqlite.SqliteDataReader ProjectsReader = projects.GetAll();
             Dictionary<string, int> ProjectsComboSource = new Dictionary<string, int>();
-
+            string OriginalProjectName = "";
             while (ProjectsReader.Read())
             {
+                if ((string)ProjectsReader.GetValue(0).ToString() == (string)TaskReader[6].ToString())
+                {
+                    OriginalProjectName = (string)ProjectsReader.GetValue(1);
+                }
                 ProjectsComboSource.Add(ProjectsReader.GetValue(1).ToString(), Int32.Parse(ProjectsReader.GetValue(0).ToString()));
             }
             ProjectsReader.Close();
@@ -66,6 +70,7 @@ namespace Takliy
             StageComboBox.Text = (string)TaskReader[1];
             OwnerComboBox.Text = OriginalOwnerName;
             AssigneComboBox.Text = OriginalAssigneName;
+            ProjectComboBox.Text = OriginalProjectName;
             StartDatePicker.Value = DateTime.Parse((string)TaskReader[4]);
             EndDatePicker.Value = DateTime.Parse((string)TaskReader[5]);
 

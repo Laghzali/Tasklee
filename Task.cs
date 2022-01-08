@@ -132,16 +132,16 @@ namespace Takliy
                     switch (stage)
                     {
                         case "To Do":
-                            grid.Rows[i].Cells[3].Style.BackColor = Color.Red;
+                            grid.Rows[i].Cells[3].Style.BackColor = Color.FromArgb(255, 225, 224);
                             break;
                         case "In Progress":
                             grid.Rows[i].Cells[3].Style.BackColor = Color.LightYellow;
                             break;
                         case "Done":
-                            grid.Rows[i].Cells[3].Style.BackColor = Color.LightGreen;
+                            grid.Rows[i].Cells[3].Style.BackColor = Color.FromArgb(225, 255, 224);
                             break;
                         case "Canceled":
-                            grid.Rows[i].Cells[3].Style.BackColor = Color.Maroon;
+                            grid.Rows[i].Cells[3].Style.BackColor = Color.FromArgb(226, 224, 255);
                             break;
                     }
 

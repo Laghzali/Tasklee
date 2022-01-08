@@ -20,6 +20,8 @@ namespace Takliy
         private void ProjectForm_Load(object sender, EventArgs e)
         {
             Project GetProjects = new Project();
+            ProjectsGrid.DefaultCellStyle.SelectionBackColor = Color.LightCyan;
+            ProjectsGrid.DefaultCellStyle.SelectionForeColor = Color.Black;
             ProjectsGrid.CellClick +=
                 new DataGridViewCellEventHandler(ProjectsGrid_CellClick);
             GetProjects.GetProjects(ProjectsGrid);
@@ -27,13 +29,21 @@ namespace Takliy
         }
         void ProjectsGrid_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-           if (e.RowIndex < 0 || e.ColumnIndex == 3)
-                {
-                int pid = Int32.Parse(ProjectsGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+            int pid = 0;
+            if (e.RowIndex >= 0 && e.ColumnIndex == 3)
+            {
+                pid = Int32.Parse(ProjectsGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
+                
                 TaskForm _TaskFormObj = new TaskForm();
                 _TaskFormObj.ProjectTaskID = pid;
                 _MainFormObj.loadform(_TaskFormObj);
-                }
+            }
+        }
+
+        private void ProjectNewButton_Click(object sender, EventArgs e)
+        {
+            AddProjectForm AddProject = new AddProjectForm();
+            AddProject.Show();
         }
     }
 }

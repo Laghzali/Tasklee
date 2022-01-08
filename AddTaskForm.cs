@@ -80,7 +80,8 @@ namespace Takliy
                         Int32.Parse(OwnerComboBox.SelectedValue.ToString()),
                         Int32.Parse(AssigneComboBox.SelectedValue.ToString()),
                         StartDatePicker.Value.ToString(),
-                        EndDatePicker.Value.ToString(), 1);
+                        EndDatePicker.Value.ToString(),
+                        Int32.Parse(ProjectComboBox.SelectedValue.ToString()));
                         _MainFormObj.ReloadMain();
                         _MainFormObj.Refresh();
                         message = "Task has been added succusfully";

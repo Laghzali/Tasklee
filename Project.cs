@@ -6,27 +6,19 @@ namespace Takliy
 {
     public class Project
     {
-        public void Add(String Name, int Leader , int[] Tasks)
+        public bool Add(String Name, int Leader)
         {
             string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
-            var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"INSERT INTO Projects(name,leader) VALUES ('{Name}','{Leader}')", conn);
-            int pid = 0;
-            if(TasksQuery.ExecuteNonQuery() != 0)
+            var ProjectsQuery = new Microsoft.Data.Sqlite.SqliteCommand($"INSERT INTO Projects(name,leader) VALUES ('{Name}','{Leader}')", conn);
+            var reader = ProjectsQuery.ExecuteNonQuery();
+            if(reader > 0)
             {
-                var pidQuery = new Microsoft.Data.Sqlite.SqliteCommand($"SELECT id FROM Projects ORDER BY DESC");
-                var reader = pidQuery.ExecuteReader();
-                while (reader.Read())
-                {
-                    pid = (int)reader.GetValue(0);
-                }
+                return true;
             }
-            foreach(int id in Tasks)
-            {
-                var TasksQuery2 = new Microsoft.Data.Sqlite.SqliteCommand($"INSERT INTO PTasks(pid,tid) VALUES ('{pid}','{id}')", conn);
-                TasksQuery2.ExecuteNonQuery();
-            }
+            return false;
+    
         }
         public void Remove(int ProjectID)
         {

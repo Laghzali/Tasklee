@@ -31,7 +31,6 @@ namespace Takliy
         {
             this.headerPanel = new System.Windows.Forms.Panel();
             this.sidebarPanel = new System.Windows.Forms.Panel();
-            this.button4 = new System.Windows.Forms.Button();
             this.tasksButton = new System.Windows.Forms.Button();
             this.ProjectsMenuButton = new System.Windows.Forms.Button();
             this.dashButton = new System.Windows.Forms.Button();
@@ -51,7 +50,6 @@ namespace Takliy
             // sidebarPanel
             // 
             this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(68)))), ((int)(((byte)(86)))));
-            this.sidebarPanel.Controls.Add(this.button4);
             this.sidebarPanel.Controls.Add(this.tasksButton);
             this.sidebarPanel.Controls.Add(this.ProjectsMenuButton);
             this.sidebarPanel.Controls.Add(this.dashButton);
@@ -60,22 +58,6 @@ namespace Takliy
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.Size = new System.Drawing.Size(176, 755);
             this.sidebarPanel.TabIndex = 1;
-            // 
-            // button4
-            // 
-            this.button4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.button4.FlatAppearance.BorderSize = 0;
-            this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button4.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.button4.Image = global::Takliy.Properties.Resources.planner;
-            this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button4.Location = new System.Drawing.Point(12, 188);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(182, 48);
-            this.button4.TabIndex = 4;
-            this.button4.Text = "EVENTS";
-            this.button4.UseVisualStyleBackColor = true;
             // 
             // tasksButton
             // 
@@ -162,7 +144,6 @@ namespace Takliy
         private System.Windows.Forms.Button dashButton;
         private System.Windows.Forms.Button tasksButton;
         private System.Windows.Forms.Button ProjectsMenuButton;
-        private System.Windows.Forms.Button button4;
     }
 }
 

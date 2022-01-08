@@ -29,6 +29,10 @@ namespace Takliy
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
             this.TaskEditButton = new System.Windows.Forms.Button();
             this.DeleteTaskButton = new System.Windows.Forms.Button();
@@ -37,6 +41,14 @@ namespace Takliy
             this.button1 = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.TasksGrid = new System.Windows.Forms.DataGridView();
+            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Project = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.TaskID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Name_cell = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -46,14 +58,6 @@ namespace Takliy
             this.Startdate = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Deadline = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.AactionsCheckBox = new System.Windows.Forms.DataGridViewCheckBoxColumn();
-            this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Project = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn3 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn5 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn6 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.dataGridViewTextBoxColumn7 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.TasksGrid)).BeginInit();
@@ -159,8 +163,20 @@ namespace Takliy
             // 
             this.TasksGrid.AllowUserToAddRows = false;
             this.TasksGrid.AllowUserToDeleteRows = false;
+            this.TasksGrid.AllowUserToResizeRows = false;
             this.TasksGrid.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.TasksGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.TasksGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
+            this.TasksGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5, 3, 3, 3);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TasksGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             this.TasksGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.TasksGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
@@ -171,15 +187,106 @@ namespace Takliy
             this.dataGridViewTextBoxColumn5,
             this.dataGridViewTextBoxColumn6,
             this.dataGridViewTextBoxColumn7});
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.TasksGrid.DefaultCellStyle = dataGridViewCellStyle2;
             this.TasksGrid.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.TasksGrid.GridColor = System.Drawing.SystemColors.Control;
             this.TasksGrid.Location = new System.Drawing.Point(0, 0);
             this.TasksGrid.MultiSelect = false;
             this.TasksGrid.Name = "TasksGrid";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.TasksGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.TasksGrid.RowHeadersVisible = false;
+            this.TasksGrid.RowHeadersWidthSizeMode = System.Windows.Forms.DataGridViewRowHeadersWidthSizeMode.DisableResizing;
+            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(5, 1, 1, 1);
+            this.TasksGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            this.TasksGrid.RowTemplate.Height = 30;
             this.TasksGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.TasksGrid.ShowCellErrors = false;
+            this.TasksGrid.ShowCellToolTips = false;
+            this.TasksGrid.ShowEditingIcon = false;
+            this.TasksGrid.ShowRowErrors = false;
             this.TasksGrid.Size = new System.Drawing.Size(800, 417);
             this.TasksGrid.TabIndex = 1;
             this.TasksGrid.CellContentDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.TasksGrid_CellContentDoubleClick);
             this.TasksGrid.SelectionChanged += new System.EventHandler(this.TasksGrid_SelectionChanged);
+            // 
+            // dataGridViewTextBoxColumn1
+            // 
+            this.dataGridViewTextBoxColumn1.DataPropertyName = "TaskID";
+            this.dataGridViewTextBoxColumn1.HeaderText = "TaskID";
+            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
+            this.dataGridViewTextBoxColumn1.ReadOnly = true;
+            this.dataGridViewTextBoxColumn1.Visible = false;
+            // 
+            // dataGridViewTextBoxColumn2
+            // 
+            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
+            this.dataGridViewTextBoxColumn2.FillWeight = 40F;
+            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
+            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
+            this.dataGridViewTextBoxColumn2.ReadOnly = true;
+            this.dataGridViewTextBoxColumn2.ToolTipText = "Task Name";
+            // 
+            // Project
+            // 
+            this.Project.FillWeight = 40F;
+            this.Project.HeaderText = "Project";
+            this.Project.Name = "Project";
+            this.Project.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn3
+            // 
+            this.dataGridViewTextBoxColumn3.DataPropertyName = "Stage";
+            this.dataGridViewTextBoxColumn3.FillWeight = 10F;
+            this.dataGridViewTextBoxColumn3.HeaderText = "Stage";
+            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
+            this.dataGridViewTextBoxColumn3.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn4
+            // 
+            this.dataGridViewTextBoxColumn4.DataPropertyName = "Owner";
+            this.dataGridViewTextBoxColumn4.FillWeight = 20F;
+            this.dataGridViewTextBoxColumn4.HeaderText = "Owner";
+            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
+            this.dataGridViewTextBoxColumn4.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn5
+            // 
+            this.dataGridViewTextBoxColumn5.DataPropertyName = "Assigne";
+            this.dataGridViewTextBoxColumn5.FillWeight = 20F;
+            this.dataGridViewTextBoxColumn5.HeaderText = "Assigne";
+            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
+            this.dataGridViewTextBoxColumn5.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn6
+            // 
+            this.dataGridViewTextBoxColumn6.DataPropertyName = "Startdate";
+            this.dataGridViewTextBoxColumn6.FillWeight = 22F;
+            this.dataGridViewTextBoxColumn6.HeaderText = "Start Date";
+            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
+            this.dataGridViewTextBoxColumn6.ReadOnly = true;
+            // 
+            // dataGridViewTextBoxColumn7
+            // 
+            this.dataGridViewTextBoxColumn7.DataPropertyName = "Deadline";
+            this.dataGridViewTextBoxColumn7.FillWeight = 22F;
+            this.dataGridViewTextBoxColumn7.HeaderText = "Deadline";
+            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
+            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // dataGridView1
             // 
@@ -274,70 +381,6 @@ namespace Takliy
             this.AactionsCheckBox.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.AactionsCheckBox.ToolTipText = "Select this task";
             this.AactionsCheckBox.TrueValue = "True";
-            // 
-            // dataGridViewTextBoxColumn1
-            // 
-            this.dataGridViewTextBoxColumn1.DataPropertyName = "TaskID";
-            this.dataGridViewTextBoxColumn1.HeaderText = "TaskID";
-            this.dataGridViewTextBoxColumn1.Name = "dataGridViewTextBoxColumn1";
-            this.dataGridViewTextBoxColumn1.ReadOnly = true;
-            this.dataGridViewTextBoxColumn1.Visible = false;
-            // 
-            // dataGridViewTextBoxColumn2
-            // 
-            this.dataGridViewTextBoxColumn2.DataPropertyName = "Name";
-            this.dataGridViewTextBoxColumn2.FillWeight = 40F;
-            this.dataGridViewTextBoxColumn2.HeaderText = "Name";
-            this.dataGridViewTextBoxColumn2.Name = "dataGridViewTextBoxColumn2";
-            this.dataGridViewTextBoxColumn2.ReadOnly = true;
-            this.dataGridViewTextBoxColumn2.ToolTipText = "Task Name";
-            // 
-            // Project
-            // 
-            this.Project.FillWeight = 40F;
-            this.Project.HeaderText = "Project";
-            this.Project.Name = "Project";
-            this.Project.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn3
-            // 
-            this.dataGridViewTextBoxColumn3.DataPropertyName = "Stage";
-            this.dataGridViewTextBoxColumn3.FillWeight = 10F;
-            this.dataGridViewTextBoxColumn3.HeaderText = "Stage";
-            this.dataGridViewTextBoxColumn3.Name = "dataGridViewTextBoxColumn3";
-            this.dataGridViewTextBoxColumn3.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn4
-            // 
-            this.dataGridViewTextBoxColumn4.DataPropertyName = "Owner";
-            this.dataGridViewTextBoxColumn4.FillWeight = 20F;
-            this.dataGridViewTextBoxColumn4.HeaderText = "Owner";
-            this.dataGridViewTextBoxColumn4.Name = "dataGridViewTextBoxColumn4";
-            this.dataGridViewTextBoxColumn4.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn5
-            // 
-            this.dataGridViewTextBoxColumn5.DataPropertyName = "Assigne";
-            this.dataGridViewTextBoxColumn5.FillWeight = 20F;
-            this.dataGridViewTextBoxColumn5.HeaderText = "Assigne";
-            this.dataGridViewTextBoxColumn5.Name = "dataGridViewTextBoxColumn5";
-            this.dataGridViewTextBoxColumn5.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn6
-            // 
-            this.dataGridViewTextBoxColumn6.DataPropertyName = "Startdate";
-            this.dataGridViewTextBoxColumn6.FillWeight = 22F;
-            this.dataGridViewTextBoxColumn6.HeaderText = "Start Date";
-            this.dataGridViewTextBoxColumn6.Name = "dataGridViewTextBoxColumn6";
-            this.dataGridViewTextBoxColumn6.ReadOnly = true;
-            // 
-            // dataGridViewTextBoxColumn7
-            // 
-            this.dataGridViewTextBoxColumn7.DataPropertyName = "Deadline";
-            this.dataGridViewTextBoxColumn7.FillWeight = 22F;
-            this.dataGridViewTextBoxColumn7.HeaderText = "Deadline";
-            this.dataGridViewTextBoxColumn7.Name = "dataGridViewTextBoxColumn7";
-            this.dataGridViewTextBoxColumn7.ReadOnly = true;
             // 
             // TaskForm
             // 
