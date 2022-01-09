@@ -245,6 +245,10 @@
     <None Include="Resources\refresh1.png" />
     <None Include="Resources\tasks.png" />
     <None Include="Resources\user.png" />
+    <None Include="Resources\feedback2.png" />
+    <None Include="Resources\feedback3.png" />
+    <None Include="Resources\task3.png" />
+    <None Include="Resources\settings.png" />
     <Content Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

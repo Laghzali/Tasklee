@@ -54,11 +54,11 @@ namespace Takliy
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(51, 142);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 16);
+            this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 16;
             this.label3.Text = "Leader";
             // 
@@ -66,7 +66,7 @@ namespace Takliy
             // 
             this.LeaderComboBoxEdit.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LeaderComboBoxEdit.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LeaderComboBoxEdit.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LeaderComboBoxEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LeaderComboBoxEdit.FormattingEnabled = true;
             this.LeaderComboBoxEdit.Location = new System.Drawing.Point(238, 132);
             this.LeaderComboBoxEdit.Margin = new System.Windows.Forms.Padding(4);
@@ -77,11 +77,11 @@ namespace Takliy
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(51, 82);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 16);
+            this.label2.Size = new System.Drawing.Size(102, 16);
             this.label2.TabIndex = 14;
             this.label2.Text = "Project Name";
             // 
@@ -91,18 +91,19 @@ namespace Takliy
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ProjectNaneInput.BackColor = System.Drawing.SystemColors.Window;
-            this.ProjectNaneInput.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectNaneInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProjectNaneInput.Location = new System.Drawing.Point(238, 79);
             this.ProjectNaneInput.Margin = new System.Windows.Forms.Padding(0);
             this.ProjectNaneInput.Name = "ProjectNaneInput";
             this.ProjectNaneInput.ShortcutsEnabled = false;
-            this.ProjectNaneInput.Size = new System.Drawing.Size(363, 23);
+            this.ProjectNaneInput.Size = new System.Drawing.Size(363, 22);
             this.ProjectNaneInput.TabIndex = 13;
             // 
             // EditProjectForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(652, 278);
             this.Controls.Add(this.EditProjectButton);
             this.Controls.Add(this.label3);

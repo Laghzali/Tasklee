@@ -39,11 +39,11 @@ namespace Takliy
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(48, 101);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(87, 16);
+            this.label2.Size = new System.Drawing.Size(102, 16);
             this.label2.TabIndex = 9;
             this.label2.Text = "Project Name";
             // 
@@ -53,22 +53,22 @@ namespace Takliy
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ProjectNaneInput.BackColor = System.Drawing.SystemColors.Window;
-            this.ProjectNaneInput.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProjectNaneInput.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProjectNaneInput.Location = new System.Drawing.Point(235, 98);
             this.ProjectNaneInput.Margin = new System.Windows.Forms.Padding(0);
             this.ProjectNaneInput.Name = "ProjectNaneInput";
             this.ProjectNaneInput.ShortcutsEnabled = false;
-            this.ProjectNaneInput.Size = new System.Drawing.Size(373, 23);
+            this.ProjectNaneInput.Size = new System.Drawing.Size(373, 22);
             this.ProjectNaneInput.TabIndex = 8;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.Location = new System.Drawing.Point(48, 161);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 16);
+            this.label3.Size = new System.Drawing.Size(57, 16);
             this.label3.TabIndex = 11;
             this.label3.Text = "Leader";
             // 
@@ -76,10 +76,10 @@ namespace Takliy
             // 
             this.LeaderComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.LeaderComboBox.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.LeaderComboBox.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LeaderComboBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LeaderComboBox.FormattingEnabled = true;
             this.LeaderComboBox.Location = new System.Drawing.Point(235, 151);
-            this.LeaderComboBox.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.LeaderComboBox.Margin = new System.Windows.Forms.Padding(4);
             this.LeaderComboBox.Name = "LeaderComboBox";
             this.LeaderComboBox.Size = new System.Drawing.Size(197, 24);
             this.LeaderComboBox.TabIndex = 10;
@@ -91,7 +91,7 @@ namespace Takliy
             this.AddProjectButton.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.AddProjectButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AddProjectButton.Location = new System.Drawing.Point(235, 222);
-            this.AddProjectButton.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.AddProjectButton.Margin = new System.Windows.Forms.Padding(4);
             this.AddProjectButton.Name = "AddProjectButton";
             this.AddProjectButton.Size = new System.Drawing.Size(88, 28);
             this.AddProjectButton.TabIndex = 12;
@@ -101,17 +101,18 @@ namespace Takliy
             // 
             // AddProjectForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.DarkGray;
             this.ClientSize = new System.Drawing.Size(648, 292);
             this.Controls.Add(this.AddProjectButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.LeaderComboBox);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ProjectNaneInput);
-            this.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "AddProjectForm";
