@@ -30,14 +30,14 @@ namespace Takliy
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.FeedPanel = new System.Windows.Forms.Panel();
-            this.PostButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.PostText = new System.Windows.Forms.RichTextBox();
-            this.panel3 = new System.Windows.Forms.Panel();
+            this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.PostText = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PostButton = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.FeedPanel.SuspendLayout();
@@ -46,26 +46,15 @@ namespace Takliy
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.label1);
+            this.panel1.Controls.Add(this.label3);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1180, 33);
             this.panel1.TabIndex = 1;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 5);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(42, 21);
-            this.label1.TabIndex = 0;
-            this.label1.Text = "Feed";
-            // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.panel3);
             this.panel2.Controls.Add(this.FeedPanel);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panel2.Location = new System.Drawing.Point(0, 33);
@@ -75,17 +64,60 @@ namespace Takliy
             // 
             // FeedPanel
             // 
-            this.FeedPanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FeedPanel.BackColor = System.Drawing.Color.White;
+            this.FeedPanel.Controls.Add(this.flowLayoutPanel1);
             this.FeedPanel.Controls.Add(this.panel4);
             this.FeedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FeedPanel.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
             this.FeedPanel.Location = new System.Drawing.Point(0, 0);
             this.FeedPanel.Name = "FeedPanel";
             this.FeedPanel.Size = new System.Drawing.Size(1180, 545);
             this.FeedPanel.TabIndex = 0;
             // 
+            // flowLayoutPanel1
+            // 
+            this.flowLayoutPanel1.AutoScroll = true;
+            this.flowLayoutPanel1.BackColor = System.Drawing.Color.Transparent;
+            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(0, 112);
+            this.flowLayoutPanel1.Name = "flowLayoutPanel1";
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(562, 433);
+            this.flowLayoutPanel1.TabIndex = 5;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.PostText);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.PostButton);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1180, 112);
+            this.panel4.TabIndex = 4;
+            // 
+            // PostText
+            // 
+            this.PostText.AutoWordSelection = true;
+            this.PostText.Location = new System.Drawing.Point(16, 32);
+            this.PostText.MaxLength = 100;
+            this.PostText.Name = "PostText";
+            this.PostText.Size = new System.Drawing.Size(522, 42);
+            this.PostText.TabIndex = 0;
+            this.PostText.Text = "";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Tai Le", 9.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(13, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(64, 16);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "New post";
+            // 
             // PostButton
             // 
-            this.PostButton.Location = new System.Drawing.Point(3, 80);
+            this.PostButton.Location = new System.Drawing.Point(16, 80);
             this.PostButton.Name = "PostButton";
             this.PostButton.Size = new System.Drawing.Size(75, 23);
             this.PostButton.TabIndex = 2;
@@ -93,42 +125,15 @@ namespace Takliy
             this.PostButton.UseVisualStyleBackColor = true;
             this.PostButton.Click += new System.EventHandler(this.PostButton_Click);
             // 
-            // label2
+            // label3
             // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "New post";
-            // 
-            // PostText
-            // 
-            this.PostText.AutoWordSelection = true;
-            this.PostText.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PostText.Location = new System.Drawing.Point(3, 29);
-            this.PostText.Name = "PostText";
-            this.PostText.Size = new System.Drawing.Size(522, 45);
-            this.PostText.TabIndex = 0;
-            this.PostText.Text = "";
-            // 
-            // panel3
-            // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(797, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(383, 545);
-            this.panel3.TabIndex = 1;
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.PostText);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.PostButton);
-            this.panel4.Location = new System.Drawing.Point(12, 6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(775, 112);
-            this.panel4.TabIndex = 4;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 5);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 21);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Feed";
             // 
             // FeedForm
             // 
@@ -157,13 +162,13 @@ namespace Takliy
         #endregion
 
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel FeedPanel;
         private System.Windows.Forms.Button PostButton;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.RichTextBox PostText;
-        private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
+        private System.Windows.Forms.Label label3;
     }
 }

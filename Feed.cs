@@ -15,7 +15,7 @@ namespace Takliy
             
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
-            var PostQuery = new Microsoft.Data.Sqlite.SqliteCommand($"INSERT INTO Posts(post,userid) VALUES ('{Post}','{UserID}')", conn);
+            var PostQuery = new Microsoft.Data.Sqlite.SqliteCommand($"INSERT INTO Posts(post,userid,date) VALUES ('{Post}','{UserID}','{DateTime.Now.ToString()}')", conn);
             PostQuery.ExecuteNonQuery();
             conn.Close();
         }
@@ -24,7 +24,7 @@ namespace Takliy
         {
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
-            var PostQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Posts", conn);
+            var PostQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select *  From Posts ORDER by id DESC", conn);
             var reader = PostQuery.ExecuteReader();
 
             return reader;

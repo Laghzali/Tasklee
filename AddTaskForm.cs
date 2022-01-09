@@ -16,7 +16,7 @@ namespace Takliy
         {
             InitializeComponent();
         }
-
+        int UID = 1;
         private void AddTask_Load(object sender, EventArgs e)
         {
             Users users = new Users();
@@ -62,6 +62,7 @@ namespace Takliy
         {
 
             Task task = new Task();
+            Feed feed = new Feed();
             string message = "";
 
             try
@@ -84,6 +85,7 @@ namespace Takliy
                         Int32.Parse(ProjectComboBox.SelectedValue.ToString()));
                         _MainFormObj.ReloadMain();
                         _MainFormObj.Refresh();
+                        feed.AddPost(UID, $"Added new task {TaskNameInput.Text} in Project {ProjectComboBox.SelectedValue.ToString()}");
                         message = "Task has been added succusfully";
                     }
 

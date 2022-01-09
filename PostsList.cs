@@ -14,12 +14,16 @@ namespace Takliy
     {
 
 
-        public PostsList(string UserName, string Post , string Date)
+        public PostsList(string UserName, string Post , string Date, string ImgURL)
         {
             InitializeComponent();
             UserNameLabel.Text = UserName;
             PostContent.Text = Post;
             DateLabel.Text = Date;
+
+            pictureBox1.Size = new Size(32, 32);
+            pictureBox1.Load(ImgURL);
+
         }
     }
 }

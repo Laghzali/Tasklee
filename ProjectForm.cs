@@ -16,6 +16,7 @@ namespace Takliy
         {
             InitializeComponent();
         }
+        int UID = 1;
         MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
         Project GetProjects = new Project();
         private void ProjectForm_Load(object sender, EventArgs e)
@@ -75,6 +76,8 @@ namespace Takliy
             if (dialogResult == DialogResult.Yes)
             {
                 GetProjects.Remove(PID);
+                Feed feed = new Feed();
+                feed.AddPost(UID, $"Deleted Project Name : {ProjectsGrid.CurrentRow.Cells[1].Value.ToString()}");
                 ProjectsGrid.Rows.Remove(ProjectsGrid.CurrentRow);
 
             }

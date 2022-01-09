@@ -13,7 +13,7 @@ namespace Takliy
     public partial class TaskForm : Form
         
     {
-
+        int UID = 1;
         public int ProjectTaskID = 0;
         public TaskForm()
         {
@@ -30,7 +30,10 @@ namespace Takliy
             if (ProjectTaskID > 0)
                 _Tasks.GetTasks(grid, ProjectTaskID);
             grid.ReadOnly = false;
+
+
             TasksGrid.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.FromArgb((int)(1 * 255), Color.FromArgb(TasksGrid.CurrentRow.Cells[3].Style.BackColor.ToArgb()));
+
 
         }
 
@@ -59,8 +62,12 @@ namespace Takliy
             if (dialogResult == DialogResult.Yes)
             {
                 Task delTask = new Task();
+
                 delTask.Remove(CheckedTaskID);
+                Feed feed = new Feed();
+                feed.AddPost(UID, $"Deleted Task Name : {CheckedRow.Cells[1].Value.ToString()}");
                 TasksGrid.Rows.Remove(CheckedRow);
+
             }
             else if (dialogResult == DialogResult.No)
             {

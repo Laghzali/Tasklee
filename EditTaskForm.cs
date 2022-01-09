@@ -17,6 +17,7 @@ namespace Takliy
             InitializeComponent();
         }
         public int TaskID = 0;
+        int UID = 1;
         MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
         private Task TaskObj = new Task();
         private void EditTaskForm_Load(object sender, EventArgs e)
@@ -103,6 +104,8 @@ namespace Takliy
                         );
                         _MainFormObj.ReloadMain();
                         _MainFormObj.Refresh();
+                        Feed feed = new Feed();
+                        feed.AddPost(UID, $"Edited task name{TaskNameInput.Text}, Project  {ProjectComboBox.Text}");
                         message = "Task has been succusfully edited";
                     }
                 }

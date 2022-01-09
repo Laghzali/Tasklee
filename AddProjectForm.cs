@@ -10,6 +10,7 @@ namespace Takliy
         {
             InitializeComponent();
         }
+        int UID = 1;
         MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
         private void AddProjectForm_Load(object sender, EventArgs e)
         {
@@ -38,6 +39,8 @@ namespace Takliy
             {
                 _MainFormObj.loadform(new ProjectForm());
                 _MainFormObj.Refresh();
+                Feed feed = new Feed();
+                feed.AddPost(UID, $"Added new Project {ProjectNaneInput.Text}, Leader is {LeaderComboBox.Text}");
                 MessageBox.Show("Project has been created");
             } else
             {

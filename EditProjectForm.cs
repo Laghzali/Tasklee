@@ -17,6 +17,7 @@ namespace Takliy
             InitializeComponent();
         }
         public int PID;
+        int UID = 1;
         Project project = new Project();
         MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
         private void EditProjectForm_Load(object sender, EventArgs e)
@@ -58,7 +59,8 @@ namespace Takliy
             {
                 _MainFormObj.loadform(new ProjectForm());
                 _MainFormObj.Refresh();
-
+                Feed feed = new Feed();
+                feed.AddPost(UID, $"Edited Project name : {ProjectNaneInput.Text}, Leader Is  {LeaderComboBoxEdit.Text}");
                 MessageBox.Show("Project has been edited");
             }
             else
