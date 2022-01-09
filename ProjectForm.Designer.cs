@@ -29,21 +29,21 @@ namespace Takliy
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle11 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle12 = new System.Windows.Forms.DataGridViewCellStyle();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.ProjectEditButton = new System.Windows.Forms.Button();
-            this.ProjectDeleteButton = new System.Windows.Forms.Button();
-            this.ProjectRefreshButton = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
-            this.ProjectNewButton = new System.Windows.Forms.Button();
             this.ProjectsGrid = new System.Windows.Forms.DataGridView();
             this.dataGridViewTextBoxColumn1 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn2 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridViewTextBoxColumn4 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Tasks = new System.Windows.Forms.DataGridViewButtonColumn();
+            this.ProjectEditButton = new System.Windows.Forms.Button();
+            this.ProjectDeleteButton = new System.Windows.Forms.Button();
+            this.ProjectRefreshButton = new System.Windows.Forms.Button();
+            this.ProjectNewButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ProjectsGrid)).BeginInit();
             this.SuspendLayout();
@@ -61,50 +61,6 @@ namespace Takliy
             this.panel1.Size = new System.Drawing.Size(800, 33);
             this.panel1.TabIndex = 1;
             // 
-            // ProjectEditButton
-            // 
-            this.ProjectEditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProjectEditButton.BackgroundImage = global::Takliy.Properties.Resources.edit;
-            this.ProjectEditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ProjectEditButton.Enabled = false;
-            this.ProjectEditButton.FlatAppearance.BorderSize = 0;
-            this.ProjectEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProjectEditButton.Location = new System.Drawing.Point(669, 3);
-            this.ProjectEditButton.Margin = new System.Windows.Forms.Padding(0);
-            this.ProjectEditButton.Name = "ProjectEditButton";
-            this.ProjectEditButton.Size = new System.Drawing.Size(31, 27);
-            this.ProjectEditButton.TabIndex = 3;
-            this.ProjectEditButton.UseVisualStyleBackColor = true;
-            // 
-            // ProjectDeleteButton
-            // 
-            this.ProjectDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProjectDeleteButton.BackgroundImage = global::Takliy.Properties.Resources.delete;
-            this.ProjectDeleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ProjectDeleteButton.Enabled = false;
-            this.ProjectDeleteButton.FlatAppearance.BorderSize = 0;
-            this.ProjectDeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProjectDeleteButton.Location = new System.Drawing.Point(700, 5);
-            this.ProjectDeleteButton.Margin = new System.Windows.Forms.Padding(0);
-            this.ProjectDeleteButton.Name = "ProjectDeleteButton";
-            this.ProjectDeleteButton.Size = new System.Drawing.Size(25, 23);
-            this.ProjectDeleteButton.TabIndex = 2;
-            this.ProjectDeleteButton.UseVisualStyleBackColor = true;
-            // 
-            // ProjectRefreshButton
-            // 
-            this.ProjectRefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.ProjectRefreshButton.BackgroundImage = global::Takliy.Properties.Resources.refresh;
-            this.ProjectRefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ProjectRefreshButton.FlatAppearance.BorderSize = 0;
-            this.ProjectRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProjectRefreshButton.Location = new System.Drawing.Point(729, 5);
-            this.ProjectRefreshButton.Margin = new System.Windows.Forms.Padding(0);
-            this.ProjectRefreshButton.Name = "ProjectRefreshButton";
-            this.ProjectRefreshButton.Size = new System.Drawing.Size(33, 25);
-            this.ProjectRefreshButton.TabIndex = 1;
-            this.ProjectRefreshButton.UseVisualStyleBackColor = true;
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -115,21 +71,6 @@ namespace Takliy
             this.label1.TabIndex = 0;
             this.label1.Text = "Projects";
             // 
-            // ProjectNewButton
-            // 
-            this.ProjectNewButton.BackColor = System.Drawing.SystemColors.Control;
-            this.ProjectNewButton.BackgroundImage = global::Takliy.Properties.Resources.new_document;
-            this.ProjectNewButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.ProjectNewButton.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ProjectNewButton.FlatAppearance.BorderSize = 0;
-            this.ProjectNewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ProjectNewButton.Location = new System.Drawing.Point(765, 0);
-            this.ProjectNewButton.Name = "ProjectNewButton";
-            this.ProjectNewButton.Size = new System.Drawing.Size(35, 33);
-            this.ProjectNewButton.TabIndex = 0;
-            this.ProjectNewButton.UseVisualStyleBackColor = false;
-            this.ProjectNewButton.Click += new System.EventHandler(this.ProjectNewButton_Click);
-            // 
             // ProjectsGrid
             // 
             this.ProjectsGrid.AllowUserToAddRows = false;
@@ -138,49 +79,50 @@ namespace Takliy
             this.ProjectsGrid.BackgroundColor = System.Drawing.SystemColors.Control;
             this.ProjectsGrid.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SunkenHorizontal;
             this.ProjectsGrid.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold);
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(3);
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProjectsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle9.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold);
+            dataGridViewCellStyle9.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle9.Padding = new System.Windows.Forms.Padding(3);
+            dataGridViewCellStyle9.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle9.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle9.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProjectsGrid.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle9;
             this.ProjectsGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.ProjectsGrid.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.dataGridViewTextBoxColumn1,
             this.dataGridViewTextBoxColumn2,
             this.dataGridViewTextBoxColumn4,
             this.Tasks});
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.ProjectsGrid.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle10.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Lato Semibold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle10.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.ProjectsGrid.DefaultCellStyle = dataGridViewCellStyle10;
             this.ProjectsGrid.Dock = System.Windows.Forms.DockStyle.Fill;
             this.ProjectsGrid.Location = new System.Drawing.Point(0, 33);
             this.ProjectsGrid.MultiSelect = false;
             this.ProjectsGrid.Name = "ProjectsGrid";
             this.ProjectsGrid.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.ProjectsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            dataGridViewCellStyle4.Padding = new System.Windows.Forms.Padding(3);
-            this.ProjectsGrid.RowsDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle11.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle11.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle11.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle11.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle11.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle11.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.ProjectsGrid.RowHeadersDefaultCellStyle = dataGridViewCellStyle11;
+            dataGridViewCellStyle12.Padding = new System.Windows.Forms.Padding(3);
+            this.ProjectsGrid.RowsDefaultCellStyle = dataGridViewCellStyle12;
             this.ProjectsGrid.RowTemplate.Height = 30;
             this.ProjectsGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.ProjectsGrid.Size = new System.Drawing.Size(800, 417);
             this.ProjectsGrid.TabIndex = 2;
+            this.ProjectsGrid.SelectionChanged += new System.EventHandler(this.ProjectsGrid_SelectionChanged);
             // 
             // dataGridViewTextBoxColumn1
             // 
@@ -212,6 +154,68 @@ namespace Takliy
             this.Tasks.FillWeight = 15F;
             this.Tasks.HeaderText = "Tasks";
             this.Tasks.Name = "Tasks";
+            // 
+            // ProjectEditButton
+            // 
+            this.ProjectEditButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProjectEditButton.BackgroundImage = global::Takliy.Properties.Resources.edit;
+            this.ProjectEditButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ProjectEditButton.Enabled = false;
+            this.ProjectEditButton.FlatAppearance.BorderSize = 0;
+            this.ProjectEditButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectEditButton.Location = new System.Drawing.Point(669, 3);
+            this.ProjectEditButton.Margin = new System.Windows.Forms.Padding(0);
+            this.ProjectEditButton.Name = "ProjectEditButton";
+            this.ProjectEditButton.Size = new System.Drawing.Size(31, 27);
+            this.ProjectEditButton.TabIndex = 3;
+            this.ProjectEditButton.UseVisualStyleBackColor = true;
+            this.ProjectEditButton.Click += new System.EventHandler(this.ProjectEditButton_Click);
+            // 
+            // ProjectDeleteButton
+            // 
+            this.ProjectDeleteButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProjectDeleteButton.BackgroundImage = global::Takliy.Properties.Resources.delete;
+            this.ProjectDeleteButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ProjectDeleteButton.Enabled = false;
+            this.ProjectDeleteButton.FlatAppearance.BorderSize = 0;
+            this.ProjectDeleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectDeleteButton.Location = new System.Drawing.Point(700, 5);
+            this.ProjectDeleteButton.Margin = new System.Windows.Forms.Padding(0);
+            this.ProjectDeleteButton.Name = "ProjectDeleteButton";
+            this.ProjectDeleteButton.Size = new System.Drawing.Size(25, 23);
+            this.ProjectDeleteButton.TabIndex = 2;
+            this.ProjectDeleteButton.UseVisualStyleBackColor = true;
+            this.ProjectDeleteButton.Click += new System.EventHandler(this.ProjectDeleteButton_Click);
+            // 
+            // ProjectRefreshButton
+            // 
+            this.ProjectRefreshButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.ProjectRefreshButton.BackgroundImage = global::Takliy.Properties.Resources.refresh;
+            this.ProjectRefreshButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ProjectRefreshButton.FlatAppearance.BorderSize = 0;
+            this.ProjectRefreshButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectRefreshButton.Location = new System.Drawing.Point(729, 5);
+            this.ProjectRefreshButton.Margin = new System.Windows.Forms.Padding(0);
+            this.ProjectRefreshButton.Name = "ProjectRefreshButton";
+            this.ProjectRefreshButton.Size = new System.Drawing.Size(33, 25);
+            this.ProjectRefreshButton.TabIndex = 1;
+            this.ProjectRefreshButton.UseVisualStyleBackColor = true;
+            this.ProjectRefreshButton.Click += new System.EventHandler(this.ProjectRefreshButton_Click);
+            // 
+            // ProjectNewButton
+            // 
+            this.ProjectNewButton.BackColor = System.Drawing.SystemColors.Control;
+            this.ProjectNewButton.BackgroundImage = global::Takliy.Properties.Resources.new_document;
+            this.ProjectNewButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.ProjectNewButton.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ProjectNewButton.FlatAppearance.BorderSize = 0;
+            this.ProjectNewButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ProjectNewButton.Location = new System.Drawing.Point(765, 0);
+            this.ProjectNewButton.Name = "ProjectNewButton";
+            this.ProjectNewButton.Size = new System.Drawing.Size(35, 33);
+            this.ProjectNewButton.TabIndex = 0;
+            this.ProjectNewButton.UseVisualStyleBackColor = false;
+            this.ProjectNewButton.Click += new System.EventHandler(this.ProjectNewButton_Click);
             // 
             // ProjectForm
             // 

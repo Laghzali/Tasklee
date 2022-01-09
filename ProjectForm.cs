@@ -17,9 +17,10 @@ namespace Takliy
             InitializeComponent();
         }
         MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
+        Project GetProjects = new Project();
         private void ProjectForm_Load(object sender, EventArgs e)
         {
-            Project GetProjects = new Project();
+            
             ProjectsGrid.DefaultCellStyle.SelectionBackColor = Color.LightCyan;
             ProjectsGrid.DefaultCellStyle.SelectionForeColor = Color.Black;
             ProjectsGrid.CellClick +=
@@ -44,6 +45,44 @@ namespace Takliy
         {
             AddProjectForm AddProject = new AddProjectForm();
             AddProject.Show();
+        }
+
+        private void ProjectEditButton_Click(object sender, EventArgs e)
+        {
+            EditProjectForm editPF = new EditProjectForm();
+            editPF.PID = Int32.Parse(ProjectsGrid.CurrentRow.Cells[0].Value.ToString());
+            editPF.Show();
+        }
+
+        private void ProjectsGrid_SelectionChanged(object sender, EventArgs e)
+        {
+            ProjectEditButton.Enabled = true;
+            ProjectDeleteButton.Enabled = true;
+
+        }
+
+        private void ProjectRefreshButton_Click(object sender, EventArgs e)
+        {
+            ProjectsGrid.Rows.Clear();
+            GetProjects.GetProjects(ProjectsGrid);
+
+        }
+
+        private void ProjectDeleteButton_Click(object sender, EventArgs e)
+        {
+            int PID = Int32.Parse(ProjectsGrid.CurrentRow.Cells[0].Value.ToString());
+            DialogResult dialogResult = MessageBox.Show("Are you sure you want to delete this Project?", "Delete Project", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
+            {
+                GetProjects.Remove(PID);
+                ProjectsGrid.Rows.Remove(ProjectsGrid.CurrentRow);
+
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+
+            }
+
         }
     }
 }

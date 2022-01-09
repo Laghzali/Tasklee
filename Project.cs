@@ -28,13 +28,18 @@ namespace Takliy
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Delete From Projects where id ={ProjectID}", conn);
             TasksQuery.ExecuteReader();
         }
-        public void Update(int ProjectID, String Name, int Leader)
+        public bool Update(int ProjectID, String Name, int Leader)
         {
             string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
-            var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"UPDATE Tasks SET name = '{Name}', leader = '{Leader}' where id = {ProjectID} ", conn);
-            TasksQuery.ExecuteReader();
+            var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"UPDATE Projects SET name = '{Name}', leader = '{Leader}' where id = {ProjectID} ", conn);
+            var reader = TasksQuery.ExecuteNonQuery();
+            if (reader > 0)
+            {
+                return true;
+            }
+            return false;
         }
         public Microsoft.Data.Sqlite.SqliteDataReader GetAll()
         {
@@ -42,6 +47,15 @@ namespace Takliy
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Projects", conn);
+            Microsoft.Data.Sqlite.SqliteDataReader TaskReader = TasksQuery.ExecuteReader();
+            return TaskReader;
+        }
+        public Microsoft.Data.Sqlite.SqliteDataReader Get(int ProjectID)
+        {
+            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+            var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
+            conn.Open();
+            var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Select * From Projects where id = {ProjectID}", conn);
             Microsoft.Data.Sqlite.SqliteDataReader TaskReader = TasksQuery.ExecuteReader();
             return TaskReader;
         }

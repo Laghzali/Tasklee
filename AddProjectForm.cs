@@ -1,11 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 using Microsoft.Data.Sqlite;
 namespace Takliy
@@ -16,7 +10,7 @@ namespace Takliy
         {
             InitializeComponent();
         }
-
+        MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
         private void AddProjectForm_Load(object sender, EventArgs e)
         {
             Users users = new Users();
@@ -39,8 +33,11 @@ namespace Takliy
         {
             Project project = new Project();
             var add = project.Add(ProjectNaneInput.Text, Int32.Parse(LeaderComboBox.SelectedValue.ToString()));
+
             if (add)
             {
+                _MainFormObj.loadform(new ProjectForm());
+                _MainFormObj.Refresh();
                 MessageBox.Show("Project has been created");
             } else
             {

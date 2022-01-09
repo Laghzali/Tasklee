@@ -47,6 +47,8 @@ namespace Takliy
                 _Tasks.GetTasks(TasksGrid , 0);
             if(ProjectTaskID > 0)
                 _Tasks.GetTasks(TasksGrid, ProjectTaskID);
+            TasksGrid.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.FromArgb((int)(1 * 255), Color.FromArgb(TasksGrid.CurrentRow.Cells[3].Style.BackColor.ToArgb()));
+
         }
         private DataGridViewRow CheckedRow;
         private int CheckedTaskID = 0;

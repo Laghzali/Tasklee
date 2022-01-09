@@ -91,6 +91,12 @@
     <Compile Include="AddTaskForm.Designer.cs">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="EditProjectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProjectForm.Designer.cs">
+      <DependentUpon>EditProjectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="EditTaskForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +131,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="AddTaskForm.resx">
       <DependentUpon>AddTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProjectForm.resx">
+      <DependentUpon>EditProjectForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="EditTaskForm.resx">
       <DependentUpon>EditTaskForm.cs</DependentUpon>
