@@ -32,12 +32,12 @@ namespace Takliy
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.FeedPanel = new System.Windows.Forms.Panel();
-            this.PostButton = new System.Windows.Forms.Button();
-            this.label2 = new System.Windows.Forms.Label();
-            this.PostText = new System.Windows.Forms.RichTextBox();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.FeedPanel = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.PostText = new System.Windows.Forms.RichTextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.PostButton = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.FeedPanel.SuspendLayout();
@@ -57,6 +57,7 @@ namespace Takliy
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Yu Gothic UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.label1.Location = new System.Drawing.Point(12, 5);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(42, 21);
@@ -73,34 +74,34 @@ namespace Takliy
             this.panel2.Size = new System.Drawing.Size(1180, 545);
             this.panel2.TabIndex = 2;
             // 
+            // panel3
+            // 
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel3.Location = new System.Drawing.Point(797, 0);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(383, 545);
+            this.panel3.TabIndex = 1;
+            // 
             // FeedPanel
             // 
-            this.FeedPanel.BackColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.FeedPanel.BackColor = System.Drawing.SystemColors.ControlDark;
             this.FeedPanel.Controls.Add(this.panel4);
             this.FeedPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.FeedPanel.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.FeedPanel.Location = new System.Drawing.Point(0, 0);
             this.FeedPanel.Name = "FeedPanel";
             this.FeedPanel.Size = new System.Drawing.Size(1180, 545);
             this.FeedPanel.TabIndex = 0;
             // 
-            // PostButton
+            // panel4
             // 
-            this.PostButton.Location = new System.Drawing.Point(3, 80);
-            this.PostButton.Name = "PostButton";
-            this.PostButton.Size = new System.Drawing.Size(75, 23);
-            this.PostButton.TabIndex = 2;
-            this.PostButton.Text = "Post";
-            this.PostButton.UseVisualStyleBackColor = true;
-            this.PostButton.Click += new System.EventHandler(this.PostButton_Click);
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 13);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "New post";
+            this.panel4.Controls.Add(this.PostText);
+            this.panel4.Controls.Add(this.label2);
+            this.panel4.Controls.Add(this.PostButton);
+            this.panel4.Location = new System.Drawing.Point(12, 6);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(775, 112);
+            this.panel4.TabIndex = 4;
             // 
             // PostText
             // 
@@ -112,23 +113,24 @@ namespace Takliy
             this.PostText.TabIndex = 0;
             this.PostText.Text = "";
             // 
-            // panel3
+            // label2
             // 
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel3.Location = new System.Drawing.Point(797, 0);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(383, 545);
-            this.panel3.TabIndex = 1;
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(3, 13);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.TabIndex = 1;
+            this.label2.Text = "New post";
             // 
-            // panel4
+            // PostButton
             // 
-            this.panel4.Controls.Add(this.PostText);
-            this.panel4.Controls.Add(this.label2);
-            this.panel4.Controls.Add(this.PostButton);
-            this.panel4.Location = new System.Drawing.Point(12, 6);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(775, 112);
-            this.panel4.TabIndex = 4;
+            this.PostButton.Location = new System.Drawing.Point(3, 80);
+            this.PostButton.Name = "PostButton";
+            this.PostButton.Size = new System.Drawing.Size(75, 23);
+            this.PostButton.TabIndex = 2;
+            this.PostButton.Text = "Post";
+            this.PostButton.UseVisualStyleBackColor = true;
+            this.PostButton.Click += new System.EventHandler(this.PostButton_Click);
             // 
             // FeedForm
             // 

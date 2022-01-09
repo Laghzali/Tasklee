@@ -11,7 +11,7 @@ namespace Takliy
     {
         public void Add(String Email , String Name , String Password)
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+            string db = "Data Source=C:/Users/emret/source/repos/Laghzali/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
             var AddQuery = new Microsoft.Data.Sqlite.SqliteCommand($"INSERT INTO Users(name,email,password) VALUES ('{Name}','{Email}', {Password})", conn);
@@ -19,7 +19,7 @@ namespace Takliy
         }
         public Microsoft.Data.Sqlite.SqliteDataReader GetAll()
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+            string db = "Data Source=C:/Users/emret/source/repos/Laghzali/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
             var UsersQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Users", conn);

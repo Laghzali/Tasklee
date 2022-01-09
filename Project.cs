@@ -8,7 +8,7 @@ namespace Takliy
     {
         public bool Add(String Name, int Leader)
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+            string db = "Data Source=C:/Users/emret/source/repos/Laghzali/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
             var ProjectsQuery = new Microsoft.Data.Sqlite.SqliteCommand($"INSERT INTO Projects(name,leader) VALUES ('{Name}','{Leader}')", conn);
@@ -22,7 +22,7 @@ namespace Takliy
         }
         public void Remove(int ProjectID)
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+            string db = "Data Source=C:/Users/emret/source/repos/Laghzali/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Delete From Projects where id ={ProjectID}", conn);
@@ -30,7 +30,7 @@ namespace Takliy
         }
         public bool Update(int ProjectID, String Name, int Leader)
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+            string db = "Data Source=C:/Users/emret/source/repos/Laghzali/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"UPDATE Projects SET name = '{Name}', leader = '{Leader}' where id = {ProjectID} ", conn);
@@ -43,7 +43,7 @@ namespace Takliy
         }
         public Microsoft.Data.Sqlite.SqliteDataReader GetAll()
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+            string db = "Data Source=C:/Users/emret/source/repos/Laghzali/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Projects", conn);
@@ -52,7 +52,7 @@ namespace Takliy
         }
         public Microsoft.Data.Sqlite.SqliteDataReader Get(int ProjectID)
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+            string db = "Data Source=C:/Users/emret/source/repos/Laghzali/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Select * From Projects where id = {ProjectID}", conn);
@@ -62,7 +62,7 @@ namespace Takliy
         public void GetProjects(DataGridView grid)
         {
 
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+            string db = "Data Source=C:/Users/emret/source/repos/Laghzali/Taskly/db/Taskly.db";
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
             var ProjectsQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Projects", conn);
