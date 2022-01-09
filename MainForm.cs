@@ -39,5 +39,10 @@ namespace Takliy
         {
             loadform(new ProjectForm());
         }
+
+        private void dashButton_Click(object sender, EventArgs e)
+        {
+            loadform(new FeedForm());
+        }
     }
 }

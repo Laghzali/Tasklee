@@ -103,6 +103,13 @@
     <Compile Include="EditTaskForm.Designer.cs">
       <DependentUpon>EditTaskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Feed.cs" />
+    <Compile Include="FeedForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FeedForm.Designer.cs">
+      <DependentUpon>FeedForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -125,6 +132,12 @@
     <Compile Include="TaskForm.Designer.cs">
       <DependentUpon>TaskForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="PostsList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="PostsList.Designer.cs">
+      <DependentUpon>PostsList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Users.cs" />
     <EmbeddedResource Include="AddProjectForm.resx">
       <DependentUpon>AddProjectForm.cs</DependentUpon>
@@ -137,6 +150,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="EditTaskForm.resx">
       <DependentUpon>EditTaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FeedForm.resx">
+      <DependentUpon>FeedForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
@@ -156,6 +172,9 @@
     </Compile>
     <EmbeddedResource Include="TaskForm.resx">
       <DependentUpon>TaskForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PostsList.resx">
+      <DependentUpon>PostsList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Task.datasource" />
@@ -205,6 +224,7 @@
     <None Include="Resources\planner1.png" />
     <None Include="Resources\refresh1.png" />
     <None Include="Resources\tasks.png" />
+    <None Include="Resources\user.png" />
     <Content Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

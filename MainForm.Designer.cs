@@ -31,10 +31,10 @@ namespace Takliy
         {
             this.headerPanel = new System.Windows.Forms.Panel();
             this.sidebarPanel = new System.Windows.Forms.Panel();
+            this.mainPanel = new System.Windows.Forms.Panel();
             this.tasksButton = new System.Windows.Forms.Button();
             this.ProjectsMenuButton = new System.Windows.Forms.Button();
             this.dashButton = new System.Windows.Forms.Button();
-            this.mainPanel = new System.Windows.Forms.Panel();
             this.sidebarPanel.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -58,6 +58,15 @@ namespace Takliy
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.Size = new System.Drawing.Size(176, 755);
             this.sidebarPanel.TabIndex = 1;
+            // 
+            // mainPanel
+            // 
+            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.mainPanel.Location = new System.Drawing.Point(176, 50);
+            this.mainPanel.Name = "mainPanel";
+            this.mainPanel.Size = new System.Drawing.Size(1279, 755);
+            this.mainPanel.TabIndex = 2;
+            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
             // 
             // tasksButton
             // 
@@ -108,15 +117,7 @@ namespace Takliy
             this.dashButton.TabIndex = 0;
             this.dashButton.Text = "FEED";
             this.dashButton.UseVisualStyleBackColor = true;
-            // 
-            // mainPanel
-            // 
-            this.mainPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.mainPanel.Location = new System.Drawing.Point(176, 50);
-            this.mainPanel.Name = "mainPanel";
-            this.mainPanel.Size = new System.Drawing.Size(1279, 755);
-            this.mainPanel.TabIndex = 2;
-            this.mainPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.mainPanel_Paint);
+            this.dashButton.Click += new System.EventHandler(this.dashButton_Click);
             // 
             // MainForm
             // 
