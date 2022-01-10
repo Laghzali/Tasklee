@@ -17,10 +17,11 @@ namespace Takliy
         {
             InitializeComponent();
         }
-        Feed feed = new Feed();
+        
         int UID = 2;
         private void FeedForm_Load(object sender, EventArgs e)
         {
+            Feed feed = new Feed();
             Microsoft.Data.Sqlite.SqliteDataReader reader = feed.GetPosts();
             List<Post> PostsList = new List<Post>();
             while (reader.Read())
@@ -35,6 +36,7 @@ namespace Takliy
                 PostsList.Add(newPost);
 
             }
+
             foreach(var post in PostsList)
             {
                 UserControl newpost = new PostsList(post.UserName, post._Post, post.Date, post.ImgUrl);
@@ -46,12 +48,18 @@ namespace Takliy
             //not checking for white space !!!!!!
             if (PostText.TextLength > 0)
             {
+                Feed feed = new Feed();
                 feed.AddPost(UID, PostText.Text);
             } else
             {
                 MessageBox.Show("Post cant be empty");
             }
             
+        }
+
+        private void PostText_Click(object sender, EventArgs e)
+        {
+            PostText.Clear();
         }
 
     }

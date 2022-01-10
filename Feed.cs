@@ -24,7 +24,7 @@ namespace Takliy
         {
             var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
             conn.Open();
-            var PostQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select *  From Posts ORDER by id DESC", conn);
+            var PostQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select *  From Posts Order by id desc", conn);
             var reader = PostQuery.ExecuteReader();
 
             return reader;

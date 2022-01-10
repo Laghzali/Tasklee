@@ -32,7 +32,11 @@ namespace Takliy
             grid.ReadOnly = false;
 
 
-            TasksGrid.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.FromArgb((int)(1 * 255), Color.FromArgb(TasksGrid.CurrentRow.Cells[3].Style.BackColor.ToArgb()));
+            if(TasksGrid.Rows.Count > 0)
+            {
+                TasksGrid.CurrentRow.DefaultCellStyle.SelectionBackColor = Color.FromArgb((int)(1 * 255), Color.FromArgb(TasksGrid.CurrentRow.Cells[3].Style.BackColor.ToArgb()));
+            }
+            
 
 
         }
@@ -93,7 +97,8 @@ namespace Takliy
 
         private void TasksGrid_SelectionChanged(object sender, EventArgs e)
         {
-            try
+
+            if (TasksGrid.Rows.Count > 0)
             {
                 CheckedTaskID = Int32.Parse(TasksGrid.CurrentRow.Cells[0].Value.ToString());
                 TasksGrid.DefaultCellStyle.SelectionBackColor = Color.FromArgb((int)(1 * 255), Color.FromArgb(TasksGrid.CurrentRow.Cells[3].Style.BackColor.ToArgb()));
@@ -101,8 +106,6 @@ namespace Takliy
                 CheckedRow = TasksGrid.CurrentRow;
                 DeleteTaskButton.Enabled = true;
                 TaskEditButton.Enabled = true;
-            } catch (Exception ){
-                MessageBox.Show("x");
             }
         }
     }
