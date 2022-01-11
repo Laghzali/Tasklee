@@ -103,7 +103,7 @@ namespace Takliy
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.DarkGray;
+            this.BackColor = System.Drawing.Color.Silver;
             this.ClientSize = new System.Drawing.Size(648, 292);
             this.Controls.Add(this.AddProjectButton);
             this.Controls.Add(this.label3);

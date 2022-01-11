@@ -99,6 +99,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="about page.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="about page.Designer.cs">
+      <DependentUpon>about page.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddProjectForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
       <DependentUpon>PostsList.cs</DependentUpon>
     </Compile>
     <Compile Include="Users.cs" />
+    <EmbeddedResource Include="about page.resx">
+      <DependentUpon>about page.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddProjectForm.resx">
       <DependentUpon>AddProjectForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -249,6 +258,19 @@
     <None Include="Resources\feedback3.png" />
     <None Include="Resources\task3.png" />
     <None Include="Resources\settings.png" />
+    <None Include="Resources\start-button %281%29.png" />
+    <None Include="Resources\start-button %281%291.png" />
+    <None Include="Resources\start-button %282%29.png" />
+    <None Include="Resources\start-button %282%291.png" />
+    <None Include="Resources\logo_footer_2018_b.png" />
+    <None Include="Resources\gfh.png" />
+    <None Include="Resources\start-button %283%29.png" />
+    <None Include="Resources\Wsm.jpg" />
+    <None Include="Resources\Wsm1.jpg" />
+    <None Include="Resources\Wsm2.jpg" />
+    <None Include="Resources\logo_wsm_footer.png" />
+    <None Include="Resources\ppp.jpg" />
+    <None Include="Resources\logo_wsm_footer1.png" />
     <Content Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
