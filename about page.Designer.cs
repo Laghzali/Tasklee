@@ -75,7 +75,7 @@ namespace Takliy
             // 
             this.pictureBox1.BackgroundImage = global::Takliy.Properties.Resources.ppp;
             this.pictureBox1.Image = global::Takliy.Properties.Resources.logo_wsm_footer1;
-            this.pictureBox1.Location = new System.Drawing.Point(592, -3);
+            this.pictureBox1.Location = new System.Drawing.Point(592, -1);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(100, 101);
             this.pictureBox1.TabIndex = 6;
