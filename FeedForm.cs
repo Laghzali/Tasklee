@@ -21,6 +21,7 @@ namespace Takliy
         int UID = 2;
         private void FeedForm_Load(object sender, EventArgs e)
         {
+            timer1.Start();
             Feed feed = new Feed();
             Microsoft.Data.Sqlite.SqliteDataReader reader = feed.GetPosts();
             List<Post> PostsList = new List<Post>();
@@ -60,6 +61,11 @@ namespace Takliy
         private void PostText_Click(object sender, EventArgs e)
         {
             PostText.Clear();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            TimeLablel.Text = DateTime.Now.ToString("T");
         }
 
     }
