@@ -65,7 +65,7 @@ namespace Takliy
             this.button3.BackColor = System.Drawing.Color.Gray;
             this.button3.ForeColor = System.Drawing.SystemColors.ControlText;
             this.button3.Image = global::Takliy.Properties.Resources.start_button__3_;
-            this.button3.Location = new System.Drawing.Point(578, 412);
+            this.button3.Location = new System.Drawing.Point(578, 399);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(114, 107);
             this.button3.TabIndex = 3;

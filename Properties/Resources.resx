@@ -136,14 +136,14 @@
   <data name="settings" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\settings.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="Wsm3" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\Wsm3.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="logo_footer_2018_b" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\logo_footer_2018_b.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="feed-back" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\feed-back1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
-  </data>
-  <data name="start-button (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\start-button (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="user" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\user.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -157,8 +157,14 @@
   <data name="start-button (1)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\start-button (1)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="logo_wsm_footer" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_wsm_footer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="idea" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\idea1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
+  <data name="ppp1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\ppp1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="feedback2" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\feedback2.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -181,8 +187,8 @@
   <data name="Wsm1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\Wsm1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\delete1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="logo_wsm_footer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\logo_wsm_footer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="planner" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\planner1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -193,11 +199,14 @@
   <data name="gfh" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\gfh.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
+  <data name="delete" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\delete1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  </data>
   <data name="start-button (2)1" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\start-button (2)1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo_wsm_footer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo_wsm_footer.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="start-button (1)" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\start-button (1).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
   <data name="ppp" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\ppp.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
@@ -208,7 +217,7 @@
   <data name="start-button (2)" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\start-button (2).png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
-  <data name="logo_wsm_footer1" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\logo_wsm_footer1.png;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
+  <data name="aboutwsm-e1557861234164-1" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Resources\aboutwsm-e1557861234164-1.jpg;System.Drawing.Bitmap, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a</value>
   </data>
 </root>
