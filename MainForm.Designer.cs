@@ -131,6 +131,7 @@ namespace Takliy
             this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Show;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Taskly";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             this.sidebarPanel.ResumeLayout(false);
             this.ResumeLayout(false);
 

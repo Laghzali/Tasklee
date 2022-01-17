@@ -10,6 +10,7 @@ namespace Takliy
         {
             InitializeComponent();
         }
+        public Form aboutpage = new Form();
         public void loadform(object Form)
         {
             if (this.mainPanel.Controls.Count > 0)
@@ -43,6 +44,11 @@ namespace Takliy
         private void dashButton_Click(object sender, EventArgs e)
         {
             loadform(new FeedForm());
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            
         }
     }
 }

@@ -12,11 +12,12 @@ namespace Takliy
 {
     public partial class about_page : Form
     {
+        public Form mainform = new Form();
         public about_page()
         {
             InitializeComponent();
-        }
 
+        }
         private void button1_Click(object sender, EventArgs e)
         {
 
@@ -25,6 +26,14 @@ namespace Takliy
         private void about_page_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+
+            this.Hide();
+            MainForm mainform = new MainForm();
+            mainform.Show();
         }
     }
 }
