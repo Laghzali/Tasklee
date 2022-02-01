@@ -57,5 +57,25 @@ namespace Takliy
             feedform.UID = this.UID;
             loadform(feedform);
         }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+            FeedForm feedform = new FeedForm();
+            feedform.UID = this.UID;
+            loadform(feedform);
+            Users user = new Users();
+           string userIMG = user.GetUserIMG(UID);
+            string username = user.GetUserName(UID);
+            pictureBox1.Load(userIMG);
+            nameLabel.Text = username;
+        }
+
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            LoginForm loginForm = new LoginForm();
+            loginForm.Show();
+        }
     }
 }

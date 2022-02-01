@@ -29,11 +29,14 @@ namespace Takliy
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.userInput = new System.Windows.Forms.TextBox();
             this.passInput = new System.Windows.Forms.TextBox();
             this.loginButton = new System.Windows.Forms.Button();
             this.User = new System.Windows.Forms.Label();
             this.Password = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // userInput
@@ -81,18 +84,35 @@ namespace Takliy
             this.Password.TabIndex = 4;
             this.Password.Text = "Password";
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = global::Takliy.Properties.Resources.user;
+            this.pictureBox1.Location = new System.Drawing.Point(194, 44);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(104, 85);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 5;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
+            // 
             // LoginForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(511, 334);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.Password);
             this.Controls.Add(this.User);
             this.Controls.Add(this.loginButton);
             this.Controls.Add(this.passInput);
             this.Controls.Add(this.userInput);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "LoginForm";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Taskly";
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -105,5 +125,6 @@ namespace Takliy
         private System.Windows.Forms.Button loginButton;
         private System.Windows.Forms.Label User;
         private System.Windows.Forms.Label Password;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

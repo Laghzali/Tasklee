@@ -40,5 +40,10 @@ namespace Takliy
                 MessageBox.Show("Please fill all inputs");
             }
         }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

@@ -58,6 +58,19 @@ namespace Takliy
             return username;
 
         }
+        public string GetUserIMG(int UserID)
+        {
+            string imgURL = "";
+            conn.Open();
+            var UsersQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Select img From Users where id  = {UserID}", conn);
+            Microsoft.Data.Sqlite.SqliteDataReader UsersReader = UsersQuery.ExecuteReader();
+            while (UsersReader.Read())
+            {
+                imgURL = UsersReader.GetValue(0).ToString();
+            }
+            return imgURL;
+
+        }
         public int Login(string user , string pass) 
         {
             int id = -1;
