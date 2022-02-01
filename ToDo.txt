@@ -6,3 +6,4 @@
 - ✅DELETE FORM
 - ❎tasks need project columns and staff
 - ❎deadline notification (when a task is close to deadline send a notification)
+❎

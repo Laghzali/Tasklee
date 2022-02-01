@@ -8,10 +8,13 @@ namespace Takliy
     public class Task
     {
 
+        private static string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+        private readonly Microsoft.Data.Sqlite.SqliteConnection conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
+
         public void Add(String Name, String Stage , int Owner , int Assigne , string Startdate, string Deadline, int ProjectID)
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
-            var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
+            
+
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"INSERT INTO Tasks(name,stage,owner,assigne,start,end,pid) VALUES ('{Name}','{Stage}', '{Owner}', '{Assigne}' , '{Startdate}', '{Deadline}' , {ProjectID})", conn);
             TasksQuery.ExecuteNonQuery();
@@ -19,17 +22,54 @@ namespace Takliy
         }
         public void Remove(int TaskID)
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
-            var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
+
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Delete From Tasks where id ={TaskID}", conn);
             TasksQuery.ExecuteNonQuery();
             conn.Close();
         }
+        public string Count(int stage)
+        {
+            string count = "";
+
+            conn.Open();
+            if (stage == 0)
+            {
+                var doneTasks = new Microsoft.Data.Sqlite.SqliteCommand($"select count(stage) From Tasks where stage = 'Done' ", conn);
+                Microsoft.Data.Sqlite.SqliteDataReader donereader = doneTasks.ExecuteReader();
+                while (donereader.Read())
+                {
+                    count = donereader.GetValue(0).ToString();
+                   
+                }
+                return count;
+            }
+            if (stage == 1)
+            {
+            var TodoTasks = new Microsoft.Data.Sqlite.SqliteCommand($"select count(stage) From Tasks where stage = 'To Do' ", conn);
+            Microsoft.Data.Sqlite.SqliteDataReader todoreader = TodoTasks.ExecuteReader();
+            while (todoreader.Read())
+            {
+               count = todoreader.GetValue(0).ToString();
+            }
+                return count;
+            }
+
+                else
+                {
+                    var ProgressTasks = new Microsoft.Data.Sqlite.SqliteCommand($"select count(stage) From Tasks where stage = 'In Progress' ", conn);
+                    Microsoft.Data.Sqlite.SqliteDataReader progressreader = ProgressTasks.ExecuteReader();
+                    while (progressreader.Read())
+                    {
+                        count = progressreader.GetValue(0).ToString();
+                    }
+                return count;
+                }
+
+        }
         public void Update(int TaskID, String Name, String Stage, int Owner, int Assigne, DateTime Startdate, DateTime Deadline, int ProjectID)
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
-            var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
+
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"UPDATE Tasks SET name = '{Name}', owner = '{Owner}' , stage = '{Stage}' , assigne = '{Assigne}', start = '{Startdate}', end = '{Deadline}' , pid = {ProjectID} where id = {TaskID} ", conn);
             TasksQuery.ExecuteNonQuery();
@@ -40,8 +80,7 @@ namespace Takliy
         {
             List<object> ReturnData = new List<object>();
 
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
-            var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
+
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand($"Select * From Tasks where id = {TaskID}", conn);
 
@@ -64,8 +103,7 @@ namespace Takliy
 
         public Microsoft.Data.Sqlite.SqliteDataReader GetAll()
         {
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
-            var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
+
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Tasks", conn);
             Microsoft.Data.Sqlite.SqliteDataReader TaskReader = TasksQuery.ExecuteReader();
@@ -75,8 +113,7 @@ namespace Takliy
         public void GetTasks(DataGridView grid , int IsProject )
         {
 
-            string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
-            var conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
+
             conn.Open();
             var TasksQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Tasks", conn);
 

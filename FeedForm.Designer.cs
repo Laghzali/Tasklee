@@ -39,16 +39,16 @@ namespace Takliy
             this.flowLayoutPanel3 = new System.Windows.Forms.FlowLayoutPanel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.label4 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
+            this.projectCount = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
+            this.todoLabel = new System.Windows.Forms.Label();
             this.panel8 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
-            this.label10 = new System.Windows.Forms.Label();
+            this.progressLabel = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.label8 = new System.Windows.Forms.Label();
-            this.label11 = new System.Windows.Forms.Label();
+            this.doneLabel = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
             this.label12 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -160,7 +160,7 @@ namespace Takliy
             this.panel7.BackColor = System.Drawing.Color.LightCyan;
             this.panel7.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel7.Controls.Add(this.label4);
-            this.panel7.Controls.Add(this.label6);
+            this.panel7.Controls.Add(this.projectCount);
             this.panel7.Location = new System.Drawing.Point(13, 13);
             this.panel7.Name = "panel7";
             this.panel7.Size = new System.Drawing.Size(123, 68);
@@ -176,22 +176,22 @@ namespace Takliy
             this.label4.TabIndex = 1;
             this.label4.Text = "Total Projects";
             // 
-            // label6
+            // projectCount
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(31, 23);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(49, 33);
-            this.label6.TabIndex = 3;
-            this.label6.Text = "10";
+            this.projectCount.AutoSize = true;
+            this.projectCount.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.projectCount.Location = new System.Drawing.Point(31, 23);
+            this.projectCount.Name = "projectCount";
+            this.projectCount.Size = new System.Drawing.Size(49, 33);
+            this.projectCount.TabIndex = 3;
+            this.projectCount.Text = "10";
             // 
             // panel6
             // 
             this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(225)))), ((int)(((byte)(224)))));
             this.panel6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel6.Controls.Add(this.label5);
-            this.panel6.Controls.Add(this.label9);
+            this.panel6.Controls.Add(this.todoLabel);
             this.panel6.Location = new System.Drawing.Point(13, 134);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
             this.panel6.Name = "panel6";
@@ -208,22 +208,22 @@ namespace Takliy
             this.label5.TabIndex = 2;
             this.label5.Text = "To do tasks";
             // 
-            // label9
+            // todoLabel
             // 
-            this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.Location = new System.Drawing.Point(31, 18);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(49, 33);
-            this.label9.TabIndex = 6;
-            this.label9.Text = "10";
+            this.todoLabel.AutoSize = true;
+            this.todoLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.todoLabel.Location = new System.Drawing.Point(31, 18);
+            this.todoLabel.Name = "todoLabel";
+            this.todoLabel.Size = new System.Drawing.Size(49, 33);
+            this.todoLabel.TabIndex = 6;
+            this.todoLabel.Text = "10";
             // 
             // panel8
             // 
             this.panel8.BackColor = System.Drawing.Color.PapayaWhip;
             this.panel8.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel8.Controls.Add(this.label7);
-            this.panel8.Controls.Add(this.label10);
+            this.panel8.Controls.Add(this.progressLabel);
             this.panel8.Location = new System.Drawing.Point(13, 255);
             this.panel8.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
             this.panel8.Name = "panel8";
@@ -240,22 +240,22 @@ namespace Takliy
             this.label7.TabIndex = 4;
             this.label7.Text = "In progress tasks";
             // 
-            // label10
+            // progressLabel
             // 
-            this.label10.AutoSize = true;
-            this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(31, 18);
-            this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(49, 33);
-            this.label10.TabIndex = 7;
-            this.label10.Text = "10";
+            this.progressLabel.AutoSize = true;
+            this.progressLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.progressLabel.Location = new System.Drawing.Point(31, 18);
+            this.progressLabel.Name = "progressLabel";
+            this.progressLabel.Size = new System.Drawing.Size(49, 33);
+            this.progressLabel.TabIndex = 7;
+            this.progressLabel.Text = "10";
             // 
             // panel9
             // 
             this.panel9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(255)))), ((int)(((byte)(224)))));
             this.panel9.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel9.Controls.Add(this.label8);
-            this.panel9.Controls.Add(this.label11);
+            this.panel9.Controls.Add(this.doneLabel);
             this.panel9.Location = new System.Drawing.Point(13, 376);
             this.panel9.Margin = new System.Windows.Forms.Padding(3, 50, 3, 3);
             this.panel9.Name = "panel9";
@@ -273,15 +273,15 @@ namespace Takliy
             this.label8.TabIndex = 5;
             this.label8.Text = "Completed tasks";
             // 
-            // label11
+            // doneLabel
             // 
-            this.label11.AutoSize = true;
-            this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(29, 18);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(49, 33);
-            this.label11.TabIndex = 8;
-            this.label11.Text = "10";
+            this.doneLabel.AutoSize = true;
+            this.doneLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.doneLabel.Location = new System.Drawing.Point(29, 18);
+            this.doneLabel.Name = "doneLabel";
+            this.doneLabel.Size = new System.Drawing.Size(49, 33);
+            this.doneLabel.TabIndex = 8;
+            this.doneLabel.Text = "10";
             // 
             // panel10
             // 
@@ -438,16 +438,16 @@ namespace Takliy
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel3;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label projectCount;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label todoLabel;
         private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label progressLabel;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label doneLabel;
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label1;

@@ -23,6 +23,12 @@ namespace Takliy
         {
             timer1.Start();
             Feed feed = new Feed();
+            Project ProjectCount = new Project();
+            Task taskcount = new Task();
+            projectCount.Text = ProjectCount.Count();
+            todoLabel.Text = taskcount.Count(1);
+            doneLabel.Text = taskcount.Count(0);
+            progressLabel.Text = taskcount.Count(2);
             Microsoft.Data.Sqlite.SqliteDataReader reader = feed.GetPosts();
             List<Post> PostsList = new List<Post>();
             while (reader.Read())
