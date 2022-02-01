@@ -48,4 +48,4 @@ useful links that helped during development :
 - https://stackoverflow.com/questions/2950326/calling-a-function-in-the-form-class-from-another-class-c-sharp-net
 - https://stackoverflow.com/questions/15896135/how-to-reload-form-in-c-sharp-when-button-submit-in-another-form-is-click/15896578
 - https://logomakr.com/
-- 
+- http://flaticon.com/
