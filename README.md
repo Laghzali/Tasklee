@@ -22,6 +22,17 @@ c# and winforms powered.
 
 useful links that helped during development :
 
+- https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.application.run?redirectedfrom=MSDN&view=windowsdesktop-6.0#System_Windows_Forms_Application_Run
+- https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.usercontrol?view=windowsdesktop-6.0
+- https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.panel?view=windowsdesktop-6.0
+- https://docs.microsoft.com/en-us/dotnet/api/system.drawing.color.toargb?view=net-6.0
+- https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridviewbuttoncolumn?view=windowsdesktop-6.0
+- https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.datagridviewcell.valuetype?view=windowsdesktop-6.0
+- https://docs.microsoft.com/en-us/dotnet/api/system.web.ui.webcontrols.gridviewrow.rowindex?view=netframework-4.8
+- https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.control.refresh?view=windowsdesktop-6.0#System_Windows_Forms_Control_Refresh
+- https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.combobox.text?view=windowsdesktop-6.0
+- https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.form.load?view=windowsdesktop-6.0
+- https://docs.microsoft.com/en-us/dotnet/desktop/winforms/controls/how-to-bind-objects-to-windows-forms-datagridview-controls?view=netframeworkdesktop-4.8
 - https://docs.microsoft.com/en-us/dotnet/api/microsoft.data.sqlite.sqlitedatareader?view=msdata-sqlite-6.0.0
 - https://docs.microsoft.com/en-us/dotnet/api/microsoft.data.sqlite?view=msdata-sqlite-6.0.0
 - https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic?view=net-6.0
