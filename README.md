@@ -2,7 +2,7 @@ Cancel changes
 # Task Lee
 ## Mohamed Laghzali &amp; Ilias mena OOP Project supervised by Dr Artur Karwatka
 
-[![N|Solid](https://github.com/Laghzali/Taskly/blob/master/Resources/logo.png?raw=true)](https://docs.microsoft.com/en-us/dotnet/csharp/)
+[![N|Solid](https://github.com/Laghzali/Taskly/blob/master/Resources/logo.png?raw=true)](https://github.com/Laghzali/Taskly)
 
 
 Tasklee is an easy to user app for managing projects and dailly tasks.
@@ -47,3 +47,5 @@ useful links that helped during development :
 - https://stackoverflow.com/questions/25368870/get-the-cell-value-of-a-gridview-row/25370251
 - https://stackoverflow.com/questions/2950326/calling-a-function-in-the-form-class-from-another-class-c-sharp-net
 - https://stackoverflow.com/questions/15896135/how-to-reload-form-in-c-sharp-when-button-submit-in-another-form-is-click/15896578
+- https://logomakr.com/
+- 
