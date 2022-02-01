@@ -10,7 +10,7 @@ namespace Takliy
     class Users
     {
         public  int ID;
-        private static string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+        private static string db = "Data Source=db/Taskly.db";
         private readonly Microsoft.Data.Sqlite.SqliteConnection conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
         public void Add(String Email , String Name , String Password)
         {

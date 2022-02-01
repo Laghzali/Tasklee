@@ -8,7 +8,7 @@ namespace Takliy
 {
     public class Feed
     {
-        private string db = "Data Source=C:/Users/CHRAJEM/Desktop/Taskly/db/Taskly.db";
+        private string db = "Data Source=db/Taskly.db";
 
         public void AddPost(int UserID, string Post)
         {
