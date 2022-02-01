@@ -13,18 +13,26 @@ namespace Takliy
 
     public partial class FeedForm : Form
     {
+        public int UID { get; set; }
+        MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
         public FeedForm()
         {
+
             InitializeComponent();
         }
         
-        int UID = 2;
         private void FeedForm_Load(object sender, EventArgs e)
         {
+
             timer1.Start();
             Feed feed = new Feed();
             Project ProjectCount = new Project();
             Task taskcount = new Task();
+            Users user = new Users();
+          
+            string username = user.GetUserName(UID);
+ 
+            nameLabel.Text = username;
             projectCount.Text = ProjectCount.Count();
             todoLabel.Text = taskcount.Count(1);
             doneLabel.Text = taskcount.Count(0);
@@ -34,8 +42,7 @@ namespace Takliy
             while (reader.Read())
             {
                 Post newPost = new Post();
-                Users user = new Users();
-                
+ 
                 newPost._Post = reader.GetValue(1).ToString();
                 newPost.UserName = user.Get(Int32.Parse(reader.GetValue(2).ToString()))[0];
                 newPost.ImgUrl = user.Get(Int32.Parse(reader.GetValue(2).ToString()))[1];
@@ -57,6 +64,9 @@ namespace Takliy
             {
                 Feed feed = new Feed();
                 feed.AddPost(UID, PostText.Text);
+                FeedForm feedform = new FeedForm();
+                    feedform.UID = this.UID;
+                _MainFormObj.loadform(feedform);
             } else
             {
                 MessageBox.Show("Post cant be empty");

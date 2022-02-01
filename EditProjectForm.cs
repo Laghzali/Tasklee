@@ -12,12 +12,12 @@ namespace Takliy
 {
     public partial class EditProjectForm : Form
     {
+        public int UID { get; set; }
         public EditProjectForm()
         {
             InitializeComponent();
         }
         public int PID;
-        int UID = 1;
         Project project = new Project();
         MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
         private void EditProjectForm_Load(object sender, EventArgs e)
@@ -57,7 +57,9 @@ namespace Takliy
 
             if (edit)
             {
-                _MainFormObj.loadform(new ProjectForm());
+                ProjectForm projectform = new ProjectForm();
+                projectform.UID = this.UID;
+                _MainFormObj.loadform(projectform);
                 _MainFormObj.Refresh();
                 Feed feed = new Feed();
                 feed.AddPost(UID, $"Edited Project name : {ProjectNaneInput.Text}, Leader Is  {LeaderComboBoxEdit.Text}");

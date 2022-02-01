@@ -63,6 +63,16 @@ namespace Takliy.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap _200_2008697_account_customer_login_man_user_icon_login_icon {
+            get {
+                object obj = ResourceManager.GetObject("200-2008697_account-customer-login-man-user-icon-login-icon", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap delete {
             get {
                 object obj = ResourceManager.GetObject("delete", resourceCulture);

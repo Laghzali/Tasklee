@@ -50,7 +50,7 @@ namespace Takliy
             this.label8 = new System.Windows.Forms.Label();
             this.doneLabel = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.label12 = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
             this.flowLayoutPanel1 = new System.Windows.Forms.FlowLayoutPanel();
@@ -285,7 +285,7 @@ namespace Takliy
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.label12);
+            this.panel10.Controls.Add(this.nameLabel);
             this.panel10.Controls.Add(this.label1);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 0);
@@ -293,15 +293,15 @@ namespace Takliy
             this.panel10.Size = new System.Drawing.Size(563, 72);
             this.panel10.TabIndex = 16;
             // 
-            // label12
+            // nameLabel
             // 
-            this.label12.AutoSize = true;
-            this.label12.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(165, 34);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(113, 30);
-            this.label12.TabIndex = 1;
-            this.label12.Text = "Mohamed";
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("Nirmala UI", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.nameLabel.Location = new System.Drawing.Point(165, 34);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(113, 30);
+            this.nameLabel.TabIndex = 1;
+            this.nameLabel.Text = "Mohamed";
             // 
             // label1
             // 
@@ -449,7 +449,7 @@ namespace Takliy
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label doneLabel;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label nameLabel;
         private System.Windows.Forms.Label label1;
     }
 }

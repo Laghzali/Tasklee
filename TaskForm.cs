@@ -13,10 +13,11 @@ namespace Takliy
     public partial class TaskForm : Form
         
     {
-        int UID = 1;
+        public int UID { get; set; }
         public int ProjectTaskID = 0;
         public TaskForm()
         {
+
             InitializeComponent();
         }
         public static Task _Tasks = new Task();
@@ -43,7 +44,8 @@ namespace Takliy
 
         private void button1_Click(object sender, EventArgs e)
         {
-            Form ShowAddTask = new AddTaskForm();
+            AddTaskForm ShowAddTask = new AddTaskForm();
+            ShowAddTask.UID = this.UID;
             ShowAddTask.Show();
         }
 
@@ -83,7 +85,9 @@ namespace Takliy
         private void TaskEditButton_Click(object sender, EventArgs e)
         {
             EditTaskForm EditForm = new EditTaskForm();
+            EditForm.UID = this.UID;
             EditForm.TaskID = CheckedTaskID;
+
             EditForm.Show();
         }
 
@@ -91,6 +95,7 @@ namespace Takliy
         {
             CheckedTaskID = Int32.Parse(TasksGrid.Rows[e.RowIndex].Cells[0].Value.ToString());
             EditTaskForm EditFormEvent = new EditTaskForm();
+            EditFormEvent.UID = this.UID;
             EditFormEvent.TaskID = CheckedTaskID;
             EditFormEvent.Show();
         }

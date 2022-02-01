@@ -12,11 +12,13 @@ namespace Takliy
 {
     public partial class ProjectForm : Form
     {
+        public int UID { get; set; }
         public ProjectForm()
         {
+
             InitializeComponent();
         }
-        int UID = 1;
+
         MainForm _MainFormObj = (MainForm)Application.OpenForms["MainForm"];
         Project GetProjects = new Project();
         private void ProjectForm_Load(object sender, EventArgs e)
@@ -45,12 +47,14 @@ namespace Takliy
         private void ProjectNewButton_Click(object sender, EventArgs e)
         {
             AddProjectForm AddProject = new AddProjectForm();
+            AddProject.UID = this.UID;
             AddProject.Show();
         }
 
         private void ProjectEditButton_Click(object sender, EventArgs e)
         {
             EditProjectForm editPF = new EditProjectForm();
+            editPF.UID = this.UID;
             editPF.PID = Int32.Parse(ProjectsGrid.CurrentRow.Cells[0].Value.ToString());
             editPF.Show();
         }

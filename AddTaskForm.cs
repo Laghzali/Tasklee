@@ -16,7 +16,7 @@ namespace Takliy
         {
             InitializeComponent();
         }
-        int UID = 1;
+        public int UID { get; set; }
         private void AddTask_Load(object sender, EventArgs e)
         {
             Users users = new Users();

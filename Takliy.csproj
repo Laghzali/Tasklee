@@ -110,6 +110,12 @@
     <Compile Include="FeedForm.Designer.cs">
       <DependentUpon>FeedForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginForm.Designer.cs">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,6 +160,9 @@
     <EmbeddedResource Include="FeedForm.resx">
       <DependentUpon>FeedForm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="LoginForm.resx">
+      <DependentUpon>LoginForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -192,39 +201,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\team.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\management %281%29.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\idea.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\task1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\feed-back.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\planner.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\delete.png" />
-    <None Include="Resources\new-document.png" />
-    <None Include="Resources\refresh-button %281%29.png" />
-    <None Include="Resources\edit.png" />
-    <None Include="Resources\delete1.png" />
-    <None Include="Resources\edit1.png" />
-    <Content Include="Resources\feed %281%29.png" />
-    <None Include="Resources\feed-back1.png" />
-    <None Include="Resources\idea1.png" />
-    <None Include="Resources\managment1.png" />
-    <None Include="Resources\new-document1.png" />
-    <None Include="Resources\planner1.png" />
-    <None Include="Resources\refresh1.png" />
-    <None Include="Resources\tasks.png" />
-    <None Include="Resources\user.png" />
     <Content Include="ToDo.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

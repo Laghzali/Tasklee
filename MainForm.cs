@@ -6,12 +6,17 @@ namespace Takliy
     
     public partial class MainForm : Form
     {
+        public int UID { get; set; }
         public MainForm()
         {
             InitializeComponent();
+
         }
+
+
         public void loadform(object Form)
         {
+
             if (this.mainPanel.Controls.Count > 0)
                 this.mainPanel.Controls.RemoveAt(0);
             Form f = Form as Form;
@@ -24,11 +29,15 @@ namespace Takliy
         }
         private void tasksButton_Click(object sender, EventArgs e)
         {
-            loadform(new TaskForm());
+            TaskForm taskform = new TaskForm();
+            taskform.UID = this.UID;
+            loadform(taskform);
         }
         public void ReloadMain()
         {
-            loadform(new TaskForm());
+            TaskForm taskform = new TaskForm();
+            taskform.UID = this.UID;
+            loadform(taskform);
         }
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
@@ -37,12 +46,16 @@ namespace Takliy
 
         private void ProjectsMenuButton_Click(object sender, EventArgs e)
         {
-            loadform(new ProjectForm());
+            ProjectForm projectform = new ProjectForm();
+            projectform.UID = this.UID;
+            loadform(projectform);
         }
 
         private void dashButton_Click(object sender, EventArgs e)
         {
-            loadform(new FeedForm());
+            FeedForm feedform = new FeedForm();
+            feedform.UID = this.UID;
+            loadform(feedform);
         }
     }
 }
