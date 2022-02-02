@@ -45,6 +45,7 @@ namespace Takliy
                 Feed feed = new Feed();
                 feed.AddPost(UID, $"Added new Project {ProjectNaneInput.Text}, Leader is {LeaderComboBox.Text}");
                 MessageBox.Show("Project has been created");
+                this.Hide();
             } else
             {
                 MessageBox.Show("Error creating new project");

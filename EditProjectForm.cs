@@ -64,6 +64,7 @@ namespace Takliy
                 Feed feed = new Feed();
                 feed.AddPost(UID, $"Edited Project name : {ProjectNaneInput.Text}, Leader Is  {LeaderComboBoxEdit.Text}");
                 MessageBox.Show("Project has been edited");
+                this.Hide();
             }
             else
             {

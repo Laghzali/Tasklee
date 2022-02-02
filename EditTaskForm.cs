@@ -109,8 +109,9 @@ namespace Takliy
                         _MainFormObj.loadform(taskform);
                         _MainFormObj.Refresh();
                         Feed feed = new Feed();
-                        feed.AddPost(UID, $"Edited task name{TaskNameInput.Text}, Project  {ProjectComboBox.Text}");
+                        feed.AddPost(UID, $"Edited task : {TaskNameInput.Text}, Project  {ProjectComboBox.Text}");
                         message = "Task has been succusfully edited";
+                        this.Hide();
                     }
                 }
                 else

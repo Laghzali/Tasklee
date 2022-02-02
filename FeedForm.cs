@@ -42,10 +42,10 @@ namespace Takliy
             while (reader.Read())
             {
                 Post newPost = new Post();
- 
+                int post_uid = Int32.Parse(reader.GetValue(2).ToString());
                 newPost._Post = reader.GetValue(1).ToString();
-                newPost.UserName = user.Get(Int32.Parse(reader.GetValue(2).ToString()))[0];
-                newPost.ImgUrl = user.Get(Int32.Parse(reader.GetValue(2).ToString()))[1];
+                newPost.UserName = user.GetUserName(post_uid);
+                newPost.ImgUrl = user.GetUserIMG(post_uid);
                 newPost.Date = reader.GetValue(3).ToString();
                 PostsList.Add(newPost);
 
@@ -64,9 +64,8 @@ namespace Takliy
             {
                 Feed feed = new Feed();
                 feed.AddPost(UID, PostText.Text);
-                FeedForm feedform = new FeedForm();
-                    feedform.UID = this.UID;
-                _MainFormObj.loadform(feedform);
+
+                _MainFormObj.ReloadFeed();
             } else
             {
                 MessageBox.Show("Post cant be empty");

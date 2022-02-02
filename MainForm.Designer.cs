@@ -36,6 +36,7 @@ namespace Takliy
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.nameLabel = new System.Windows.Forms.Label();
             this.sidebarPanel = new System.Windows.Forms.Panel();
+            this.UsersButton = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
             this.tasksButton = new System.Windows.Forms.Button();
             this.ProjectsMenuButton = new System.Windows.Forms.Button();
@@ -71,21 +72,22 @@ namespace Takliy
             // 
             // flowLayoutPanel1
             // 
+            this.flowLayoutPanel1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.flowLayoutPanel1.Controls.Add(this.pictureBox1);
             this.flowLayoutPanel1.Controls.Add(this.nameLabel);
-            this.flowLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Right;
             this.flowLayoutPanel1.FlowDirection = System.Windows.Forms.FlowDirection.RightToLeft;
-            this.flowLayoutPanel1.Location = new System.Drawing.Point(1000, 0);
+            this.flowLayoutPanel1.Location = new System.Drawing.Point(1000, 12);
             this.flowLayoutPanel1.Name = "flowLayoutPanel1";
-            this.flowLayoutPanel1.Size = new System.Drawing.Size(455, 64);
+            this.flowLayoutPanel1.Size = new System.Drawing.Size(455, 52);
             this.flowLayoutPanel1.TabIndex = 2;
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Location = new System.Drawing.Point(406, 3);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(46, 42);
+            this.pictureBox1.Size = new System.Drawing.Size(46, 46);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -95,7 +97,7 @@ namespace Takliy
             this.nameLabel.AutoSize = true;
             this.nameLabel.Font = new System.Drawing.Font("Lato", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.nameLabel.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.nameLabel.Location = new System.Drawing.Point(367, 14);
+            this.nameLabel.Location = new System.Drawing.Point(367, 16);
             this.nameLabel.Name = "nameLabel";
             this.nameLabel.Size = new System.Drawing.Size(33, 19);
             this.nameLabel.TabIndex = 1;
@@ -104,6 +106,7 @@ namespace Takliy
             // sidebarPanel
             // 
             this.sidebarPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(56)))), ((int)(((byte)(68)))), ((int)(((byte)(86)))));
+            this.sidebarPanel.Controls.Add(this.UsersButton);
             this.sidebarPanel.Controls.Add(this.button1);
             this.sidebarPanel.Controls.Add(this.tasksButton);
             this.sidebarPanel.Controls.Add(this.ProjectsMenuButton);
@@ -113,6 +116,23 @@ namespace Takliy
             this.sidebarPanel.Name = "sidebarPanel";
             this.sidebarPanel.Size = new System.Drawing.Size(176, 741);
             this.sidebarPanel.TabIndex = 1;
+            // 
+            // UsersButton
+            // 
+            this.UsersButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.UsersButton.FlatAppearance.BorderSize = 0;
+            this.UsersButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.UsersButton.Font = new System.Drawing.Font("Bookman Old Style", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UsersButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.UsersButton.Image = ((System.Drawing.Image)(resources.GetObject("UsersButton.Image")));
+            this.UsersButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.UsersButton.Location = new System.Drawing.Point(6, 234);
+            this.UsersButton.Name = "UsersButton";
+            this.UsersButton.Size = new System.Drawing.Size(170, 48);
+            this.UsersButton.TabIndex = 5;
+            this.UsersButton.Text = "Users";
+            this.UsersButton.UseVisualStyleBackColor = true;
+            this.UsersButton.Click += new System.EventHandler(this.UsersButton_Click);
             // 
             // button1
             // 
@@ -160,9 +180,9 @@ namespace Takliy
             this.ProjectsMenuButton.ForeColor = System.Drawing.SystemColors.ButtonFace;
             this.ProjectsMenuButton.Image = global::Takliy.Properties.Resources.idea;
             this.ProjectsMenuButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ProjectsMenuButton.Location = new System.Drawing.Point(3, 180);
+            this.ProjectsMenuButton.Location = new System.Drawing.Point(-1, 181);
             this.ProjectsMenuButton.Name = "ProjectsMenuButton";
-            this.ProjectsMenuButton.Size = new System.Drawing.Size(182, 48);
+            this.ProjectsMenuButton.Size = new System.Drawing.Size(195, 48);
             this.ProjectsMenuButton.TabIndex = 1;
             this.ProjectsMenuButton.Text = "PROJECTS";
             this.ProjectsMenuButton.UseVisualStyleBackColor = true;
@@ -179,7 +199,7 @@ namespace Takliy
             this.dashButton.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.dashButton.Location = new System.Drawing.Point(3, 72);
             this.dashButton.Name = "dashButton";
-            this.dashButton.Size = new System.Drawing.Size(182, 48);
+            this.dashButton.Size = new System.Drawing.Size(176, 48);
             this.dashButton.TabIndex = 0;
             this.dashButton.Text = "FEED";
             this.dashButton.UseVisualStyleBackColor = true;
@@ -232,6 +252,7 @@ namespace Takliy
         private System.Windows.Forms.FlowLayoutPanel flowLayoutPanel1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button UsersButton;
     }
 }
 

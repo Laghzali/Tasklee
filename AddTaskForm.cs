@@ -87,6 +87,7 @@ namespace Takliy
                         _MainFormObj.Refresh();
                         feed.AddPost(UID, $"Added new task {TaskNameInput.Text} in Project {ProjectComboBox.SelectedValue.ToString()}");
                         message = "Task has been added succusfully";
+                        this.Hide();
                     }
 
                 } else

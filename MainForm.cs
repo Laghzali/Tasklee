@@ -39,6 +39,12 @@ namespace Takliy
             taskform.UID = this.UID;
             loadform(taskform);
         }
+        public void ReloadFeed()
+        {
+            FeedForm feedform = new FeedForm();
+            feedform.UID = this.UID;
+            loadform(feedform);
+        }
         private void mainPanel_Paint(object sender, PaintEventArgs e)
         {
 
@@ -64,7 +70,7 @@ namespace Takliy
             feedform.UID = this.UID;
             loadform(feedform);
             Users user = new Users();
-           string userIMG = user.GetUserIMG(UID);
+            string userIMG = user.GetUserIMG(UID);
             string username = user.GetUserName(UID);
             pictureBox1.Load(userIMG);
             nameLabel.Text = username;
@@ -73,9 +79,15 @@ namespace Takliy
 
         private void button1_Click(object sender, EventArgs e)
         {
-            this.Hide();
+            this.Close();
             LoginForm loginForm = new LoginForm();
             loginForm.Show();
+        }
+
+        private void UsersButton_Click(object sender, EventArgs e)
+        {
+            UsersForm usersform = new UsersForm();
+            loadform(usersform);
         }
     }
 }

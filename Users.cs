@@ -12,13 +12,6 @@ namespace Takliy
         public  int ID;
         private static string db = "Data Source=db/Taskly.db";
         private readonly Microsoft.Data.Sqlite.SqliteConnection conn = new Microsoft.Data.Sqlite.SqliteConnection(db);
-        public void Add(String Email , String Name , String Password)
-        {
-           
-            conn.Open();
-            var AddQuery = new Microsoft.Data.Sqlite.SqliteCommand($"INSERT INTO Users(name,email,password,img) VALUES ('{Name}','{Email}', {Password} , 'https://img.icons8.com/external-bearicons-glyph-bearicons/32/000000/external-User-essential-collection-bearicons-glyph-bearicons.png')", conn);
-            AddQuery.ExecuteReader();
-        }
         public Microsoft.Data.Sqlite.SqliteDataReader GetAll()
         {
            
@@ -94,6 +87,39 @@ namespace Takliy
             return id;
 
         }
+        public int add(string fullname , string email , string phone , string pass)
+        {
+            conn.Open();
+            var InsertUserQuery = new Microsoft.Data.Sqlite.SqliteCommand($"INSERT INTO Users (name, email, phone, pass , img) VALUES ('{fullname}', '{email}', '{phone}', '{pass}' , 'https://img.icons8.com/color/32/000000/user.png');", conn);
+            int InsertQueryCommand = InsertUserQuery.ExecuteNonQuery();
+            return InsertQueryCommand;
+        }
 
+        public int Remove(int uid)
+        {
+            conn.Open();
+            var InsertUserQuery = new Microsoft.Data.Sqlite.SqliteCommand($"DELETE FROM Users where id = {uid}", conn);
+            int InsertQueryCommand = InsertUserQuery.ExecuteNonQuery();
+            return InsertQueryCommand;
+        }
+        public void GetUsers(DataGridView grid)
+        {
+
+
+            conn.Open();
+            var UsersQuery = new Microsoft.Data.Sqlite.SqliteCommand("Select * From Users", conn);
+            Microsoft.Data.Sqlite.SqliteDataReader UsersQueryReader = UsersQuery.ExecuteReader();
+            while (UsersQueryReader.Read())
+            {
+                grid.Rows.Add(new object[] {
+                UsersQueryReader.GetValue(0) , //UserID
+                UsersQueryReader.GetValue(1), //UserName
+                UsersQueryReader.GetValue(3), //email
+                UsersQueryReader.GetValue(5), //Phone
+
+                });
+            }
+
+        }
     }
 }
