@@ -102,6 +102,7 @@ namespace Takliy
             int InsertQueryCommand = InsertUserQuery.ExecuteNonQuery();
             return InsertQueryCommand;
         }
+        //Populate a datagridview
         public void GetUsers(DataGridView grid)
         {
 
