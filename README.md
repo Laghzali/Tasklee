@@ -5,7 +5,7 @@ Cancel changes
 [![N|Solid](https://github.com/Laghzali/Taskly/blob/master/Resources/logo.png?raw=true)](https://github.com/Laghzali/Taskly)
 
 
-Tasklee is an easy to user app for managing projects and dailly tasks.
+Tasklee is an easy to use app for managing projects and dailly tasks.
 c# and winforms powered.
 
 - Winforms
