@@ -49,7 +49,7 @@ namespace Takliy
             string dbPath = @"db\Taskly.db";
             if(!File.Exists(dbPath))
             {
-  
+                DirectoryInfo di = Directory.CreateDirectory(@"db");
                 var createDb = new SqliteConnection("Data Source=db/Taskly.db");
                 string sql = @"BEGIN TRANSACTION;
                 CREATE TABLE IF NOT EXISTS 'Projects' (
