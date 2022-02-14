@@ -22,7 +22,14 @@ namespace Takliy
             DateLabel.Text = Date;
 
             pictureBox1.Size = new Size(32, 32);
-            pictureBox1.Load(ImgURL);
+            try
+            {
+                pictureBox1.Load(ImgURL);
+            } catch
+            {
+
+            }
+            
 
         }
     }

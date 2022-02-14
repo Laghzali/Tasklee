@@ -61,6 +61,7 @@ namespace Takliy
             {
                 imgURL = UsersReader.GetValue(0).ToString();
             }
+
             return imgURL;
 
         }

@@ -53,7 +53,8 @@ namespace Takliy
 
             foreach(var post in PostsList)
             {
-                UserControl newpost = new PostsList(post.UserName, post._Post, post.Date, post.ImgUrl);
+
+               UserControl newpost = new PostsList(post.UserName, post._Post, post.Date, post.ImgUrl);
                flowLayoutPanel1.Controls.Add(newpost);
             }
         }
