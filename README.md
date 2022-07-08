@@ -5,6 +5,7 @@ Cancel changes
 [![N|Solid](https://github.com/Laghzali/Taskly/blob/master/Resources/logo.png?raw=true)](https://github.com/Laghzali/Taskly)
 
 
+
 Tasklee is an easy to use app for managing projects and dailly tasks.
 c# and winforms powered.
 
@@ -18,6 +19,9 @@ c# and winforms powered.
 - Create and manage daily tasks , add, delete , edit , assign tasks to specific user.
 - Track each task by its stage : Todo , In progress, done
 - Activity feed where you can see every activity performed by all users
+
+[![N|Solid](https://repository-images.githubusercontent.com/444831850/1898f072-be94-45c5-b935-627d2991f150)](https://github.com/Laghzali/Taskly)
+
 ## Useful links
 
 useful links that helped during development :
